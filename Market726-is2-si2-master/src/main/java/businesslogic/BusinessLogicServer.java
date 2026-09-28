@@ -15,6 +15,7 @@ import javax.swing.border.EmptyBorder;
 import configuration.ConfigXML;
 
 import javax.swing.JTextArea;
+import javax.swing.WindowConstants;
 import javax.xml.ws.Endpoint;
 
 
@@ -40,7 +41,7 @@ public class BusinessLogicServer extends JDialog {
 	public static void main(String[] args) {
 		try {
 			BusinessLogicServer dialog = new BusinessLogicServer();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -84,11 +85,11 @@ public class BusinessLogicServer extends JDialog {
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
 			}
-			{
+			
 				JButton cancelButton = new JButton("Cancel");
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
-			}
+			
 		}
 		
 		ConfigXML c=ConfigXML.getInstance();
@@ -97,7 +98,7 @@ public class BusinessLogicServer extends JDialog {
 			textArea.append("\nERROR, the business logic is configured as local");
 		}
 		else {
-		try {
+		
 
 			try{
 				
@@ -121,9 +122,7 @@ public class BusinessLogicServer extends JDialog {
 			textArea.append("Running service at:\n\t" + service);
 			textArea.append("\n\n\nPress button to exit this server... ");
 			
-		  } catch (Exception e) {
-			textArea.append(e.toString());
-		  }
+		  
 
 	  }
 	}

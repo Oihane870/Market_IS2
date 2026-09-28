@@ -1,18 +1,83 @@
 
-Fbusinesslogic.BLFacadeImplementation#getOpenEskaerak()Ljava/util/List;C
-7src\main\java\businesslogic\BLFacadeImplementation.java (("1*æ
+kbusinesslogic.BLFacadeImplementation#createEskaera(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ZC
+7src\main\java\businesslogic\BLFacadeImplementation.javaû û( "startingBlock*ç
+startingBlock
+û  û(UŠ
+‡
+
+ú ú(
+%6"
+__annotate*)
+
+__unknown_file (
+	WebMethod*<
+
+__unknown_file ( 
+
+
+buyerEmailjava.lang.String`
+^
+
+û( û(2
+
+buyerEmailjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%6…
+‚
+
+ú ú(
+%7"
+__annotate*)
+
+__unknown_file (
+	WebMethod*7
+
+__unknown_file (
+
+titlejava.lang.String[
+Y
+
+û; û(@
+titlejava.lang.String"__annotation*"
+
+__unknown_file (
+
+%7‹
+ˆ
+
+ú ú(
+%8"
+__annotate*)
+
+__unknown_file (
+	WebMethod*=
+
+__unknown_file (!
+
+descriptionjava.lang.Stringa
+_
+
+ûI û(T
+descriptionjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%8*
+1*İ	
 1
-‚ ‚(‡
+ü ü(‡
 „
 
-‚ ‚(
+ü ü(
 %0dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager|z
 
-‚ ‚(
+ü ü(
 
 %1void"dataAccess.DataAccess#open()V*9
 
@@ -21,45 +86,68 @@ $businesslogic.BLFacadeImplementation"
 %0dataAccess.DataAccess2open()‡
 „
 
-ƒ ƒ('
+ı ı(#
 %2dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
-	dbManager¬©
+	dbManager´±
 
-ƒ ƒ(9
-%3java.util.List"7dataAccess.DataAccess#getOpenEskaerak()Ljava/util/List;*9
+ı ı(Q
+%3boolean"\dataAccess.DataAccess#createEskaera(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z*9
 
 __unknown_file (
 
-%2dataAccess.DataAccess2getOpenEskaerak()a
-_
-
-ƒ ƒ(:
-listajava.util.List"__id*2
+%2dataAccess.DataAccess*<
 
-__unknown_file (
-
-%3java.util.List‡
+__unknown_file ( 
+
+
+buyerEmailjava.lang.String*7
+
+__unknown_file (
+
+titlejava.lang.String*=
+
+__unknown_file (!
+
+descriptionjava.lang.String2EcreateEskaera(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)U
+S
+
+ı ı(R
+successboolean"__id*+
+
+__unknown_file (
+
+%3boolean‡
 „
 
-„ „(
+ş ş(
 %4dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager~|
 
-„ „(
+ş ş(
 
 %5void"dataAccess.DataAccess#close()V*9
 
 __unknown_file (
 
-%4dataAccess.DataAccess2close()"'
+%4dataAccess.DataAccess2close()""
 
-… …(
-
-listajava.util.ListB(&
-$businesslogic.BLFacadeImplementationH
+ÿ ÿ(
+
+successboolean:,
+
+û! û(3
+
+buyerEmailjava.lang.String:'
+
+û4 û(A
+titlejava.lang.String:-
+
+ûB û(T
+descriptionjava.lang.StringB(&
+$businesslogic.BLFacadeImplementationHX

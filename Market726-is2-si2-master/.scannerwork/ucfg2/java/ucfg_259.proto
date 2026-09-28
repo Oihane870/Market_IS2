@@ -1,11 +1,11 @@
 
-]businesslogic.BLFacadeImplementation#acceptEskaintza(Ljava/lang/Integer;Ljava/lang/Integer;)ZC
-7src\main\java\businesslogic\BLFacadeImplementation.javaë ë(""startingBlock*Ñ
+lbusinesslogic.BLFacadeImplementation#addEskaintza(Ljava/lang/Integer;Ljava/lang/String;FLjava/lang/String;)ZC
+7src\main\java\businesslogic\BLFacadeImplementation.javaã ã("startingBlock*∏
 startingBlock
-ë" ë(Jä
+ã ã(cä
 á
 
-ê ê(
+ä ä(
 %6"
 __annotate*)
 
@@ -17,45 +17,86 @@ __annotate*)
 	eskaeraIdjava.lang.Integer`
 ^
 
-ë+ ë(4
+ã( ã(1
 	eskaeraIdjava.lang.Integer"__annotation*"
 
 __unknown_file (
 
-%6å
-â
+%6ã
+à
 
-ê ê(
+ä ä(
 %7"
 __annotate*)
 
 __unknown_file (
-	WebMethod*>
+	WebMethod*=
 
-__unknown_file ("
- 
-eskaintzaIdjava.lang.Integerb
-`
+__unknown_file (!
+
+sellerEmailjava.lang.Stringa
+_
 
-ë> ë(I 
-eskaintzaIdjava.lang.Integer"__annotation*"
+ã: ã(E
+sellerEmailjava.lang.String"__annotation*"
 
 __unknown_file (
 
-%7*
-1*â	
-1
-í í(á
+%7y
+w
+
+ä ä(
+%8"
+__annotate*)
+
+__unknown_file (
+	WebMethod*,
+
+__unknown_file (
+
+pricefloatP
+N
+
+ãM ã(R
+pricefloat"__annotation*"
+
+__unknown_file (
+
+%8á
 Ñ
 
-í í(
+ä ä(
+%9"
+__annotate*)
+
+__unknown_file (
+	WebMethod*9
+
+__unknown_file (
+
+messagejava.lang.String]
+[
+
+ã[ ã(b
+messagejava.lang.String"__annotation*"
+
+__unknown_file (
+
+%9*
+1*è
+
+1
+å å(á
+Ñ
+
+å å(
 %0dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager|z
 
-í í(
+å å(
 
 %1void"dataAccess.DataAccess#open()V*9
 
@@ -64,15 +105,15 @@ $businesslogic.BLFacadeImplementation"
 %0dataAccess.DataAccess2open()á
 Ñ
 
-ì ì(#
+ç ç(#
 %2dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
-	dbManager‡›
+	dbManagerÊ„
 
-ì ì(K
-%3boolean"NdataAccess.DataAccess#acceptEskaintza(Ljava/lang/Integer;Ljava/lang/Integer;)Z*9
+ç ç(X
+%3boolean"]dataAccess.DataAccess#addEskaintza(Ljava/lang/Integer;Ljava/lang/String;FLjava/lang/String;)Z*9
 
 __unknown_file (
 
@@ -80,14 +121,22 @@ $businesslogic.BLFacadeImplementation"
 
 __unknown_file ( 
 
-	eskaeraIdjava.lang.Integer*>
+	eskaeraIdjava.lang.Integer*=
 
-__unknown_file ("
- 
-eskaintzaIdjava.lang.Integer27acceptEskaintza(Ljava/lang/Integer;Ljava/lang/Integer;)U
+__unknown_file (!
+
+sellerEmailjava.lang.String*,
+
+__unknown_file (
+
+pricefloat*9
+
+__unknown_file (
+
+messagejava.lang.String2FaddEskaintza(Ljava/lang/Integer;Ljava/lang/String;FLjava/lang/String;)U
 S
 
-ì ì(L
+ç ç(Y
 successboolean"__id*+
 
 __unknown_file (
@@ -95,14 +144,14 @@ S
 %3booleaná
 Ñ
 
-î î(
+é é(
 %4dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager~|
 
-î î(
+é é(
 
 %5void"dataAccess.DataAccess#close()V*9
 
@@ -110,13 +159,19 @@ $businesslogic.BLFacadeImplementation"
 
 %4dataAccess.DataAccess2close()""
 
-ï ï(
+è è(
 
 successboolean:,
 
-ë# ë(5
-	eskaeraIdjava.lang.Integer:.
+ã  ã(2
+	eskaeraIdjava.lang.Integer:-
 
-ë6 ë(I 
-eskaintzaIdjava.lang.IntegerB(&
+ã3 ã(F
+sellerEmailjava.lang.String:
+
+ãG ã(S
+pricefloat:)
+
+ãT ã(b
+messagejava.lang.StringB(&
 $businesslogic.BLFacadeImplementationHX

@@ -21,16 +21,18 @@ import java.awt.Image;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  * It implements the business logic as a web service.
  */
 @WebService(endpointInterface = "businessLogic.BLFacade")
 public class BLFacadeImplementation  implements BLFacade {
-	 private static final int baseSize = 160;
+	private static final Logger LOGGER = Logger.getLogger(BLFacadeImplementation.class.getName());
+	 
 
 		private static final String basePath="src/main/resources/images/";
-	DataAccess dbManager;
+		protected transient DataAccess dbManager;
 
 	public BLFacadeImplementation()  {		
 		System.out.println("Creating BLFacadeImplementation instance");
@@ -52,7 +54,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		Sale product=dbManager.createSale(title, description, status, price, pubDate, sellerEmail, file);		
 		dbManager.close();
 		return product;
-   };
+   }
 	
    /**
     * {@inheritDoc}
@@ -106,7 +108,7 @@ public class BLFacadeImplementation  implements BLFacade {
         try {
             return ImageIO.read(image);
         } catch (IOException e) {
-            e.printStackTrace();
+        	LOGGER.log(Level.WARNING, "Error al descargar la imagen: {0}", imageName);
         }
         return null;
     }

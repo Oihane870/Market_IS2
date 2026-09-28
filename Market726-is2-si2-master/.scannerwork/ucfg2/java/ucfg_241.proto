@@ -1,41 +1,65 @@
 
-Zbusinesslogic.BLFacadeImplementation#getPurchasedItems(Ljava/lang/String;)Ljava/util/List;C
-7src\main\java\businesslogic\BLFacadeImplementation.javaá á($"startingBlock*á
+Wbusinesslogic.BLFacadeImplementation#buyProduct(Ljava/lang/String;Ljava/lang/Integer;)ZC
+7src\main\java\businesslogic\BLFacadeImplementation.javaÇ Ç("startingBlock*Ç
 startingBlock
-á$ á(2Ö
-Ç
+Ç Ç(Dä
+á
 
-Ü Ü(
+Å Å(
 %6"
 __annotate*)
 
 __unknown_file (
-	WebMethod*7
+	WebMethod*<
 
-__unknown_file (
-
-emailjava.lang.String[
-Y
+__unknown_file ( 
+
 
-á, á(1
-emailjava.lang.String"__annotation*"
+buyerEmailjava.lang.String`
+^
+
+Ç% Ç(/
+
+buyerEmailjava.lang.String"__annotation*"
 
 __unknown_file (
 
-%6*
-1*«
+%6ã
+à
+
+Å Å(
+%7"
+__annotate*)
+
+__unknown_file (
+	WebMethod*=
+
+__unknown_file (!
+
+
+saleNumberjava.lang.Integera
+_
+
+Ç9 Ç(C
+
+saleNumberjava.lang.Integer"__annotation*"
+
+__unknown_file (
+
+%7*
+1*¸
 1
-à à(á
+É É(á
 Ñ
 
-à à(
+É É(
 %0dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager|z
 
-à à(
+É É(
 
 %1void"dataAccess.DataAccess#open()V*9
 
@@ -44,52 +68,63 @@ $businesslogic.BLFacadeImplementation"
 %0dataAccess.DataAccess2open()á
 Ñ
 
-â â(
+Ñ Ñ(#
 %2dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
-	dbManagerçä
+	dbManager”–
 
-â â(7
-%3java.util.List"KdataAccess.DataAccess#getPurchasedItems(Ljava/lang/String;)Ljava/util/List;*9
+Ñ Ñ(F
+%3boolean"HdataAccess.DataAccess#buyProduct(Ljava/lang/String;Ljava/lang/Integer;)Z*9
 
 __unknown_file (
 
-%2dataAccess.DataAccess*7
+%2dataAccess.DataAccess*<
 
-__unknown_file (
-
-emailjava.lang.String2%getPurchasedItems(Ljava/lang/String;)a
-_
+__unknown_file ( 
+
 
-â â(8
-itemsjava.util.List"__id*2
+buyerEmailjava.lang.String*=
 
-__unknown_file (
-
-%3java.util.Listá
+__unknown_file (!
+
+
+saleNumberjava.lang.Integer21buyProduct(Ljava/lang/String;Ljava/lang/Integer;)U
+S
+
+Ñ Ñ(G
+successboolean"__id*+
+
+__unknown_file (
+
+%3booleaná
 Ñ
 
-ä ä(
+Ö Ö(
 %4dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager~|
 
-ä ä(
+Ö Ö(
 
 %5void"dataAccess.DataAccess#close()V*9
 
 __unknown_file (
 
-%4dataAccess.DataAccess2close()"'
+%4dataAccess.DataAccess2close()""
 
-ã ã(
-
-itemsjava.util.List:'
+Ü Ü(
+
+successboolean:,
 
-á% á(1
-emailjava.lang.StringB(&
-$businesslogic.BLFacadeImplementationH
+Ç Ç(0
+
+buyerEmailjava.lang.String:-
+
+Ç1 Ç(C
+
+saleNumberjava.lang.IntegerB(&
+$businesslogic.BLFacadeImplementationHX

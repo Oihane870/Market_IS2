@@ -1,106 +1,79 @@
 
-bbusinesslogic.BLFacadeImplementation#isLogged(Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;A
-7src\main\java\businesslogic\BLFacadeImplementation.javar r(%"startingBlock*⁄
-startingBlockr% r(>Ä
-~
-r r(
-%6"
+Vbusinesslogic.BLFacadeImplementation#downloadImage(Ljava/lang/String;)Ljava/awt/Image;A
+7src\main\java\businesslogic\BLFacadeImplementation.javaj j()"startingBlock*?
+3m m('"0
+m m('$
+"
+%4java.awt.image.BufferedImage*â
+startingBlockj) j(;á
+Ñ
+j j(
+%8"
 __annotate*)
 
 __unknown_file (
-	WebMethod*5
+	WebMethod*;
 
-__unknown_file (
-
-logjava.lang.StringW
-U
-r- r(0
-logjava.lang.String"__annotation*"
+__unknown_file (
+
+	imageNamejava.lang.String]
+[
+j1 j(:
+	imageNamejava.lang.String"__annotation*"
 
 __unknown_file (
 
-%6Å
+%8*
+5*˛
+4m m(Á
+‰
+m m(&"
+%4java.awt.image.BufferedImage"Hjavax.imageio.ImageIO#read(Ljava/io/File;)Ljava/awt/image/BufferedImage;*5
+
+__unknown_file ("
+javax.imageio.ImageIO*3
+
+__unknown_file (
+
+imagejava.io.File*
+3*µ
+5k k(&f
+d
+k k(&
+%0java.lang.String"__id*:
+
+__unknown_file (
+src/main/resources/images/Å
 
-r r(
-%7"
-__annotate*)
+k k(0
+%1java.lang.String"__concat*$
+k k(&
+
+%0java.lang.String*+
+k' k(0
+
+	imageNamejava.lang.String.,
+k k(
+%2java.io.File"java.io.File•
+¢
+k k(1
+%3"(java.io.File#<init>(Ljava/lang/String;)V*0
 
-__unknown_file (
-	WebMethod*6
-
-__unknown_file (
-
-passjava.lang.StringX
-V
-r9 r(=
-passjava.lang.String"__annotation*"
-
-__unknown_file (
-
-%7*
-1*
-1s s(Ö
-Ç
-s s(
-%0dataAccess.DataAccess"__id*S
-
-__unknown_file (7*5&
-$businesslogic.BLFacadeImplementation"
-	dbManagerzx
-s s(
-
-%1void"dataAccess.DataAccess#open()V*9
-
-__unknown_file (
-
-%0dataAccess.DataAccess2open()Ö
-Ç
-t t(
-%2dataAccess.DataAccess"__id*S
-
-__unknown_file (7*5&
-$businesslogic.BLFacadeImplementation"
-	dbManager—Œ
-t t((
-%3domain.Seller"SdataAccess.DataAccess#isLogged(Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;*9
-
-__unknown_file (
-
-%2dataAccess.DataAccess*5
-
-__unknown_file (
-
-logjava.lang.String*6
-
-__unknown_file (
-
-passjava.lang.String2.isLogged(Ljava/lang/String;Ljava/lang/String;)Y
-W
-t t()
-sdomain.Seller"__id*1
-
-__unknown_file (
-
-%3domain.SellerÖ
-Ç
-u u(
-%4dataAccess.DataAccess"__id*S
-
-__unknown_file (7*5&
-$businesslogic.BLFacadeImplementation"
-	dbManager|z
-u u(
-
-%5void"dataAccess.DataAccess#close()V*9
-
-__unknown_file (
-
-%4dataAccess.DataAccess2close()" 
-v v(
+__unknown_file (
 
-sdomain.Seller:#
-r& r(1
-logjava.lang.String:$
-r2 r(=
-passjava.lang.StringB(&
+%2java.io.File*4
+
+__unknown_file (
+
+%1java.lang.String[
+Y
+k k(2
+imagejava.io.File"__id*0
+
+__unknown_file (
+
+%2java.io.File*
+4:)
+j* j(:
+	imageNamejava.lang.StringB(&
 $businesslogic.BLFacadeImplementationH

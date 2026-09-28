@@ -1,11 +1,11 @@
 
-obusinesslogic.BLFacadeImplementation#addErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)ZC
-7src\main\java\businesslogic\BLFacadeImplementation.java¾ ¾(."startingBlock*é
+Zbusinesslogic.BLFacadeImplementation#resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)ZC
+7src\main\java\businesslogic\BLFacadeImplementation.java¹ ¹( "startingBlock*Æ
 startingBlock
-¾. ¾(d‹
+¹  ¹(S‹
 ˆ
 
-¾ ¾(
+¸ ¸(
 %6"
 __annotate*)
 
@@ -18,68 +18,66 @@ __annotate*)
 saleNumberjava.lang.Integera
 _
 
-¾7 ¾(A
+¹) ¹(3
 
 saleNumberjava.lang.Integer"__annotation*"
 
 __unknown_file (
 
-%6†
-ƒ
+%6
+
 
-¾ ¾(
+¸ ¸(
 %7"
 __annotate*)
 
 __unknown_file (
-	WebMethod*8
+	WebMethod*4
 
-__unknown_file (
-
-reasonjava.lang.String\
-Z
+__unknown_file (
+
+saldomain.SalaketaX
+V
 
-¾J ¾(P
-reasonjava.lang.String"__annotation*"
+¹> ¹(A
+saldomain.Salaketa"__annotation*"
 
 __unknown_file (
 
-%7Š
-‡
+%7}
+{
 
-¾ ¾(
+¸ ¸(
 %8"
 __annotate*)
 
 __unknown_file (
-	WebMethod*<
+	WebMethod*0
 
-__unknown_file ( 
-
+__unknown_file (
+
+aceptarbooleanT
+R
 
-buyerEmailjava.lang.String`
-^
-
-¾Y ¾(c
-
-buyerEmailjava.lang.String"__annotation*"
+¹K ¹(R
+aceptarboolean"__annotation*"
 
 __unknown_file (
 
 %8*
-1*Þ	
+1*¤	
 1
-¿ ¿(‡
+º º(‡
 „
 
-¿ ¿(
+º º(
 %0dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager|z
 
-¿ ¿(
+º º(
 
 %1void"dataAccess.DataAccess#open()V*9
 
@@ -88,15 +86,15 @@ $businesslogic.BLFacadeImplementation"
 %0dataAccess.DataAccess2open()‡
 „
 
-À À(
+» »(
 %2dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
-	dbManager½º
+	dbManagerƒ€
 
-À À(P
-%3boolean"`dataAccess.DataAccess#addErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Z*9
+» »(E
+%3boolean"KdataAccess.DataAccess#resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)Z*9
 
 __unknown_file (
 
@@ -105,34 +103,33 @@ $businesslogic.BLFacadeImplementation"
 __unknown_file (!
 
 
-saleNumberjava.lang.Integer*8
+saleNumberjava.lang.Integer*4
 
-__unknown_file (
-
-reasonjava.lang.String*<
+__unknown_file (
+
+saldomain.Salaketa*0
 
-__unknown_file ( 
-
-
-buyerEmailjava.lang.String2IaddErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Q
+__unknown_file (
+
+aceptarboolean24resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)Q
 O
 
-À À(Q
-resboolean"__id*+
+» »(F
+repboolean"__id*+
 
 __unknown_file (
 
 %3boolean‡
 „
 
-Á Á(
+¼ ¼(
 %4dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager~|
 
-Á Á(
+¼ ¼(
 
 %5void"dataAccess.DataAccess#close()V*9
 
@@ -140,18 +137,17 @@ $businesslogic.BLFacadeImplementation"
 
 %4dataAccess.DataAccess2close()"
 
-Â Â(
+½ ½(
 
-resboolean:-
+repboolean:-
 
-¾/ ¾(B
+¹! ¹(4
 
-saleNumberjava.lang.Integer:(
+saleNumberjava.lang.Integer:$
 
-¾C ¾(Q
-reasonjava.lang.String:,
+¹5 ¹(B
+saldomain.Salaketa: 
 
-¾R ¾(c
-
-buyerEmailjava.lang.StringB(&
+¹C ¹(R
+aceptarbooleanB(&
 $businesslogic.BLFacadeImplementationHX

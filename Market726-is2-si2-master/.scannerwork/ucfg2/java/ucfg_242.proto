@@ -1,11 +1,11 @@
 
-Cbusinesslogic.BLFacadeImplementation#addMoney(Ljava/lang/String;F)ZC
-7src\main\java\businesslogic\BLFacadeImplementation.javaè è("startingBlock*÷
+Zbusinesslogic.BLFacadeImplementation#getPurchasedItems(Ljava/lang/String;)Ljava/util/List;C
+7src\main\java\businesslogic\BLFacadeImplementation.javaâ â($"startingBlock*á
 startingBlock
-è è(7Ö
+â$ â(2Ö
 Ç
 
-é é(
+à à(
 %6"
 __annotate*)
 
@@ -17,45 +17,25 @@ __annotate*)
 emailjava.lang.String[
 Y
 
-è# è((
+â, â(1
 emailjava.lang.String"__annotation*"
 
 __unknown_file (
 
-%6z
-x
-
-é é(
-%7"
-__annotate*)
-
-__unknown_file (
-	WebMethod*-
-
-__unknown_file (
-
-zenbatfloatQ
-O
-
-è0 è(6
-zenbatfloat"__annotation*"
-
-__unknown_file (
-
-%7*
-1*∑
+%6*
+1*«
 1
-ê ê(á
+ä ä(á
 Ñ
 
-ê ê(
+ä ä(
 %0dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager|z
 
-ê ê(
+ä ä(
 
 %1void"dataAccess.DataAccess#open()V*9
 
@@ -64,15 +44,15 @@ $businesslogic.BLFacadeImplementation"
 %0dataAccess.DataAccess2open()á
 Ñ
 
-ë ë(
+ã ã(
 %2dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
-	dbManagerñì
+	dbManagerçä
 
-ë ë(7
-%3boolean"4dataAccess.DataAccess#addMoney(Ljava/lang/String;F)Z*9
+ã ã(7
+%3java.util.List"KdataAccess.DataAccess#getPurchasedItems(Ljava/lang/String;)Ljava/util/List;*9
 
 __unknown_file (
 
@@ -80,43 +60,36 @@ $businesslogic.BLFacadeImplementation"
 
 __unknown_file (
 
-emailjava.lang.String*-
-
-__unknown_file (
-
-zenbatfloat2addMoney(Ljava/lang/String;F)Q
-O
+emailjava.lang.String2%getPurchasedItems(Ljava/lang/String;)a
+_
 
-ë ë(8
-resboolean"__id*+
+ã ã(8
+itemsjava.util.List"__id*2
 
-__unknown_file (
-
-%3booleaná
+__unknown_file (
+
+%3java.util.Listá
 Ñ
 
-í í(
+å å(
 %4dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager~|
 
-í í(
+å å(
 
 %5void"dataAccess.DataAccess#close()V*9
 
 __unknown_file (
 
-%4dataAccess.DataAccess2close()"
+%4dataAccess.DataAccess2close()"'
 
-ì ì(
-
-resboolean:'
+ç ç(
+
+itemsjava.util.List:'
 
-è è()
-emailjava.lang.String:
-
-è* è(6
-zenbatfloatB(&
-$businesslogic.BLFacadeImplementationHX
+â% â(1
+emailjava.lang.StringB(&
+$businesslogic.BLFacadeImplementationH

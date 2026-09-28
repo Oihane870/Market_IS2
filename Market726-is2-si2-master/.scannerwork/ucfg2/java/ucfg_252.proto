@@ -1,65 +1,61 @@
 
-Xbusinesslogic.BLFacadeImplementation#addToBasket(Ljava/lang/String;Ljava/lang/Integer;)ZC
-7src\main\java\businesslogic\BLFacadeImplementation.javaÚ Ú("startingBlock*‚
+`businesslogic.BLFacadeImplementation#isAdmin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Admin;C
+7src\main\java\businesslogic\BLFacadeImplementation.javaÔ Ô("startingBlock*æ
 startingBlock
-Ú Ú(EŠ
-‡
+Ô Ô(1ƒ
+€
 
-Ù Ù(
+Ó Ó(
 %6"
 __annotate*)
 
 __unknown_file (
-	WebMethod*<
+	WebMethod*5
 
-__unknown_file ( 
-
+__unknown_file (
+
+logjava.lang.StringY
+W
 
-buyerEmailjava.lang.String`
-^
-
-Ú& Ú(0
-
-buyerEmailjava.lang.String"__annotation*"
+Ô  Ô(#
+logjava.lang.String"__annotation*"
 
 __unknown_file (
 
-%6‹
-ˆ
+%6„
+
 
-Ù Ù(
+Ó Ó(
 %7"
 __annotate*)
 
 __unknown_file (
-	WebMethod*=
+	WebMethod*6
 
-__unknown_file (!
-
+__unknown_file (
+
+passjava.lang.StringZ
+X
 
-saleNumberjava.lang.Integera
-_
-
-Ú: Ú(D
-
-saleNumberjava.lang.Integer"__annotation*"
+Ô, Ô(0
+passjava.lang.String"__annotation*"
 
 __unknown_file (
 
 %7*
-1*ò
+1*û
 1
-Û Û(‡
+Õ Õ(‡
 „
 
-Û Û(
+Õ Õ(
 %0dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager|z
 
-Û Û(
+Õ Õ(
 
 %1void"dataAccess.DataAccess#open()V*9
 
@@ -68,63 +64,59 @@ $businesslogic.BLFacadeImplementation"
 %0dataAccess.DataAccess2open()‡
 „
 
-Ü Ü(
+Ö Ö(
 %2dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
-	dbManagerÕÒ
+	dbManagerÏÌ
 
-Ü Ü(A
-%3boolean"IdataAccess.DataAccess#addToBasket(Ljava/lang/String;Ljava/lang/Integer;)Z*9
+Ö Ö(.
+%3domain.Admin"QdataAccess.DataAccess#isAdmin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Admin;*9
 
 __unknown_file (
 
-%2dataAccess.DataAccess*<
+%2dataAccess.DataAccess*5
 
-__unknown_file ( 
-
-
-buyerEmailjava.lang.String*=
+__unknown_file (
+
+logjava.lang.String*6
 
-__unknown_file (!
-
-
-saleNumberjava.lang.Integer22addToBasket(Ljava/lang/String;Ljava/lang/Integer;)O
-M
-
-Ü Ü(B
-aboolean"__id*+
+__unknown_file (
 
-__unknown_file (
+passjava.lang.String2-isAdmin(Ljava/lang/String;Ljava/lang/String;)Y
+W
 
-%3boolean‡
+Ö Ö(/
+adomain.Admin"__id*0
+
+__unknown_file (
+
+%3domain.Admin‡
 „
 
-Ý Ý(
+× ×(
 %4dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager~|
 
-Ý Ý(
+× ×(
 
 %5void"dataAccess.DataAccess#close()V*9
 
 __unknown_file (
 
-%4dataAccess.DataAccess2close()"
+%4dataAccess.DataAccess2close()"!
 
-Þ Þ(
-
-aboolean:,
+Ø Ø(
+
+adomain.Admin:%
 
-Ú Ú(1
+Ô Ô($
+logjava.lang.String:&
 
-buyerEmailjava.lang.String:-
-
-Ú2 Ú(D
-
-saleNumberjava.lang.IntegerB(&
-$businesslogic.BLFacadeImplementationHX
+Ô% Ô(0
+passjava.lang.StringB(&
+$businesslogic.BLFacadeImplementationH

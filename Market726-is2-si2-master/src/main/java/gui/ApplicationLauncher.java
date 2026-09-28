@@ -12,9 +12,10 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import businesslogic.BLFacade;
 import businesslogic.BLFacadeImplementation;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 public class ApplicationLauncher { 
-	
+	private static final Logger LOGGER = Logger.getLogger(ApplicationLauncher.class.getName());
 	
 	
 	public static void main(String[] args) {
@@ -51,14 +52,12 @@ public class ApplicationLauncher {
 			} 
 			
 			MainGUI.setBussinessLogic(appFacadeInterface);
-			//ErreklamatuGUI g=new ErreklamatuGUI();
-			//g.setVisible(true);
 			
 		}catch (Exception e) {
 			a.jLabelSelectOption.setText("Error: "+e.toString());
 			a.jLabelSelectOption.setForeground(Color.RED);	
 			
-			System.out.println("Error in ApplicationLauncher: "+e.toString());
+			LOGGER.log(Level.SEVERE, "Error in ApplicationLauncher", e);
 		}
 
 

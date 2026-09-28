@@ -1,61 +1,63 @@
 
-`businesslogic.BLFacadeImplementation#isAdmin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Admin;C
-7src\main\java\businesslogic\BLFacadeImplementation.java“ “("startingBlock*Ê
+Pbusinesslogic.BLFacadeImplementation#resolveErreklamazioa(Ljava/lang/Integer;Z)ZC
+7src\main\java\businesslogic\BLFacadeImplementation.javaÃ Ã(2"startingBlock*Ê
 startingBlock
-“ “(1É
-Ä
+Ã2 Ã(Vã
+à
 
-— —(
+Ã Ã(
 %6"
 __annotate*)
 
 __unknown_file (
-	WebMethod*5
+	WebMethod*=
 
-__unknown_file (
-
-logjava.lang.StringY
-W
+__unknown_file (!
+
 
-“  “(#
-logjava.lang.String"__annotation*"
+saleNumberjava.lang.Integera
+_
+
+Ã; Ã(E
+
+saleNumberjava.lang.Integer"__annotation*"
 
 __unknown_file (
 
-%6Ñ
-Å
+%6|
+z
 
-— —(
+Ã Ã(
 %7"
 __annotate*)
 
 __unknown_file (
-	WebMethod*6
+	WebMethod*/
 
-__unknown_file (
-
-passjava.lang.StringZ
-X
+__unknown_file (
+
+acceptbooleanS
+Q
 
-“, “(0
-passjava.lang.String"__annotation*"
+ÃO Ã(U
+acceptboolean"__annotation*"
 
 __unknown_file (
 
 %7*
-1*˚
+1*Ÿ
 1
-” ”(á
+Õ Õ(á
 Ñ
 
-” ”(
+Õ Õ(
 %0dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager|z
 
-” ”(
+Õ Õ(
 
 %1void"dataAccess.DataAccess#open()V*9
 
@@ -64,59 +66,61 @@ $businesslogic.BLFacadeImplementation"
 %0dataAccess.DataAccess2open()á
 Ñ
 
-‘ ‘(
+Œ Œ(
 %2dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
-	dbManagerœÃ
+	dbManager∏µ
 
-‘ ‘(.
-%3domain.Admin"QdataAccess.DataAccess#isAdmin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Admin;*9
+Œ Œ(H
+%3boolean"AdataAccess.DataAccess#resolveErreklamazioa(Ljava/lang/Integer;Z)Z*9
 
 __unknown_file (
 
-%2dataAccess.DataAccess*5
+%2dataAccess.DataAccess*=
 
-__unknown_file (
-
-logjava.lang.String*6
-
-__unknown_file (
-
-passjava.lang.String2-isAdmin(Ljava/lang/String;Ljava/lang/String;)Y
-W
+__unknown_file (!
+
 
-‘ ‘(/
-adomain.Admin"__id*0
+saleNumberjava.lang.Integer*/
 
-__unknown_file (
-
-%3domain.Adminá
+__unknown_file (
+
+acceptboolean2*resolveErreklamazioa(Ljava/lang/Integer;Z)Q
+O
+
+Œ Œ(I
+resboolean"__id*+
+
+__unknown_file (
+
+%3booleaná
 Ñ
 
-’ ’(
+œ œ(
 %4dataAccess.DataAccess"__id*S
 
 __unknown_file (7*5&
 $businesslogic.BLFacadeImplementation"
 	dbManager~|
 
-’ ’(
+œ œ(
 
 %5void"dataAccess.DataAccess#close()V*9
 
 __unknown_file (
 
-%4dataAccess.DataAccess2close()"!
+%4dataAccess.DataAccess2close()"
 
-÷ ÷(
-
-adomain.Admin:%
+– –(
+
+resboolean:-
 
-“ “($
-logjava.lang.String:&
+Ã3 Ã(F
 
-“% “(0
-passjava.lang.StringB(&
-$businesslogic.BLFacadeImplementationH
+saleNumberjava.lang.Integer:
+
+ÃG Ã(U
+acceptbooleanB(&
+$businesslogic.BLFacadeImplementationHX

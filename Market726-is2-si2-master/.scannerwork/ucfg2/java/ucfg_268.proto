@@ -1,15 +1,15 @@
 
-domain.Eskaintza#getPrice()F-
-#src\main\java\domain\Eskaintza.java ("1*†
-1% (*\
-Z
-% (*
-%0float"__id*;
++domain.Eskaintza#getId()Ljava/lang/Integer;-
+#src\main\java\domain\Eskaintza.java ("1*›
+1$ (&e
+c
+$ (&
+%0java.lang.Integer"__id*8
 
-__unknown_file (*
-domain.Eskaintza"
-price"
- (+
-
-%0floatB
-domain.EskaintzaHX
+__unknown_file (*
+domain.Eskaintza"
+id"%
+ ('
+
+%0java.lang.IntegerB
+domain.EskaintzaH
