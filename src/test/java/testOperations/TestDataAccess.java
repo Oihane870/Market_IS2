@@ -80,6 +80,9 @@ public class TestDataAccess {
 			}
 			return seller;
     }
+	public boolean existSeller(String email) {
+		return db.find(Seller.class, email) != null;
+	}
 
 		
 	public void createBuyerWithNullBasket(String email) {
