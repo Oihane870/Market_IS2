@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 public class CreateEskaeraGUI extends JFrame {
     private static final long serialVersionUID = 1L;
     
-    private String userEmail;
+    
     
     private JLabel lblTitle = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateEskaeraGUI.lblTitle"));
     private JTextField txtTitle = new JTextField();
