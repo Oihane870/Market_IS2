@@ -45,6 +45,7 @@ public class ConfigXML {
 	private String password;
 	
 	private String locale;
+	private transient BLFacade server;
 
 	public String getLocale() {
 		return locale;
@@ -74,32 +75,22 @@ public class ConfigXML {
 	private ConfigXML(){
 		
 		  try {
-			  DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			  DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			  Document doc = dBuilder.parse(new File(configFile));
-			  doc.getDocumentElement().normalize();
-
-			  NodeList list = doc.getElementsByTagName("config");
-			  Element config = (Element) list.item(0); // list.item(0) is a Node that is an Element
-
-			  
-				//Two possible values: true (no instance of RemoteServer needs to be launched) or false (RemoteServer needs to be run first)
-			  String value= ((Element)config.getElementsByTagName("businessLogic").item(0)).getAttribute("local");
-			  businessLogicLocal=value.equals("true");
-
-			  businessLogicNode = getTagValue("businessLogicNode", config);
-
-			  businessLogicPort = getTagValue("businessLogicPort", config);
-
-			  businessLogicName = getTagValue("businessLogicName", config);
-			  
-			  locale = getTagValue("locale", config);
-
-			  
-			  
-				
-
-			  dbFilename = getTagValue("dbFilename", config);
+			   DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();  
+			  dbFactory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true); 
+			  dbFactory.setFeature("http://xml.org/sax/features/external-general-entities", false); 
+			  dbFactory.setFeature("http://xml.org/sax/features/external-parameter-entities", false); 
+			  dbFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false); 
+			  dbFactory.setXIncludeAware(false); 
+			  dbFactory.setExpandEntityReferences(false);  
+			  dbFactory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, ""); 
+			  dbFactory.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, ""); 
+			  DocumentBuilder dBuilder = dbFactory.newDocumentBuilder(); 
+			  Document doc = dBuilder.parse(new File(configFile)); 
+			  doc.getDocumentElement().normalize(); 
+			  NodeList list = doc.getElementsByTagName("config"); 
+			  Element config = (Element) list.item(0); 
+			  String value = ((Element) config.getElementsByTagName("businessLogic").item(0)).getAttribute("local"); 
+			 1
 
 				//Two possible values: true (no instance of RemoteServer needs to be launched) or false (RemoteServer needs to be run first)
 			  value= ((Element)config.getElementsByTagName("database").item(0)).getAttribute("local");
