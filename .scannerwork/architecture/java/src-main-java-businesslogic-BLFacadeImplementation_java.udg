@@ -1,5 +1,5 @@
 
-1.0oihane870_marketis2JavaFrontend"1789814227137*java2.B—F
+1.0oihane870_marketis2JavaFrontend"1791645167443*java2.B™G
 <
 7src/main/java/businesslogic/BLFacadeImplementation.java2
 	
@@ -95,318 +95,322 @@ Pjava.util.logging.Logger#getLogger(Ljava/lang/String;)Ljava/util/logging/Logger
 .businesslogic.BLFacadeImplementation#<init>()V60
 
 (37:2)-(40:3)61
+3
+-jdk.internal.vm.annotation.IntrinsicCandidate62
 
-java.io.PrintStream63
+java.io.PrintStream64
 6
-0java.io.PrintStream#println(Ljava/lang/String;)V65
+0java.io.PrintStream#println(Ljava/lang/String;)V66
 
-ARG_066
+ARG_067
 .
-(Creating BLFacadeImplementation instance67
+(Creating BLFacadeImplementation instance68
 
-java.lang.System69
+java.lang.System70
 
-java.lang.System.out71
+java.lang.System.out72
 K
-Ebusinesslogic.BLFacadeImplementation#<init>(LdataAccess/DataAccess;)V73
+Ebusinesslogic.BLFacadeImplementation#<init>(LdataAccess/DataAccess;)V74
 
-(42:5)-(45:3)74
+(42:5)-(45:3)75
 
-	has param75
+	has param76
 H
-BCreating BLFacadeImplementation instance with DataAccess parameter76
+BCreating BLFacadeImplementation instance with DataAccess parameter77
 õ
-îbusinesslogic.BLFacadeImplementation#createSale(Ljava/lang/String;Ljava/lang/String;IFLjava/util/Date;Ljava/lang/String;Ljava/io/File;)Ldomain/Sale;78
+îbusinesslogic.BLFacadeImplementation#createSale(Ljava/lang/String;Ljava/lang/String;IFLjava/util/Date;Ljava/lang/String;Ljava/io/File;)Ldomain/Sale;79
 
-(51:4)-(57:5)79
+(51:4)-(57:5)80
 
 
-createSale80
+createSale81
 
-domain.Sale82
+domain.Sale83
 
-java.util.Date84
+java.util.Date85
 
-java.io.File86
+java.io.File87
 
-	WebMethod88
+	WebMethod89
 '
-!Recovered#typeBindingLWebMethod;090
+!Recovered#typeBindingLWebMethod;091
 )
-#exceptions.FileNotUploadedException92
-.
-(exceptions.MustBeLaterThanTodayException94
-*
-$exceptions.SaleAlreadyExistException96
+#exceptions.FileNotUploadedException93
 #
-dataAccess.DataAccess#open()V98
+MustBeLaterThanTodayException95
+
+SaleAlreadyExistException97
+#
+dataAccess.DataAccess#open()V99
 ç
-ÖdataAccess.DataAccess#createSale(Ljava/lang/String;Ljava/lang/String;IFLjava/util/Date;Ljava/lang/String;Ljava/io/File;)Ldomain/Sale;100
+ÖdataAccess.DataAccess#createSale(Ljava/lang/String;Ljava/lang/String;IFLjava/util/Date;Ljava/lang/String;Ljava/io/File;)Ldomain/Sale;101
 %
-dataAccess.DataAccess#close()V102
+dataAccess.DataAccess#close()V103
 X
-Qbusinesslogic.BLFacadeImplementation#getSales(Ljava/lang/String;)Ljava/util/List;104
+Qbusinesslogic.BLFacadeImplementation#getSales(Ljava/lang/String;)Ljava/util/List;105
 
-(62:2)-(68:3)105
+(62:2)-(68:3)106
 
-getSales106
+getSales107
 
-java.util.List108
+java.util.List109
 I
-BdataAccess.DataAccess#getSales(Ljava/lang/String;)Ljava/util/List;110
+BdataAccess.DataAccess#getSales(Ljava/lang/String;)Ljava/util/List;111
 q
-jbusinesslogic.BLFacadeImplementation#getPublishedSales(Ljava/lang/String;Ljava/util/Date;)Ljava/util/List;112
+jbusinesslogic.BLFacadeImplementation#getPublishedSales(Ljava/lang/String;Ljava/util/Date;)Ljava/util/List;113
 
-(73:3)-(79:4)113
+(73:3)-(79:4)114
 
-getPublishedSales114
+getPublishedSales115
 b
-[dataAccess.DataAccess#getPublishedSales(Ljava/lang/String;Ljava/util/Date;)Ljava/util/List;116
+[dataAccess.DataAccess#getPublishedSales(Ljava/lang/String;Ljava/util/Date;)Ljava/util/List;117
 e
-^businesslogic.BLFacadeImplementation#getFile(Ljava/lang/String;)Ljava/awt/image/BufferedImage;118
+^businesslogic.BLFacadeImplementation#getFile(Ljava/lang/String;)Ljava/awt/image/BufferedImage;119
 
-(83:2)-(85:3)119
+(83:2)-(85:3)120
 
-getFile120
+getFile121
 #
-java.awt.image.BufferedImage122
+java.awt.image.BufferedImage123
 V
-OdataAccess.DataAccess#getFile(Ljava/lang/String;)Ljava/awt/image/BufferedImage;124
+OdataAccess.DataAccess#getFile(Ljava/lang/String;)Ljava/awt/image/BufferedImage;125
 4
--businesslogic.BLFacadeImplementation#close()V126
+-businesslogic.BLFacadeImplementation#close()V127
 
-(88:2)-(92:3)127
+(88:2)-(92:3)128
 
-close128
+close129
 ;
-4businesslogic.BLFacadeImplementation#initializeBD()V130
+4businesslogic.BLFacadeImplementation#initializeBD()V131
 
-(97:5)-(102:3)131
+(97:5)-(102:3)132
 
-initializeBD132
+initializeBD133
 ,
-%dataAccess.DataAccess#initializeDB()V134
+%dataAccess.DataAccess#initializeDB()V135
 ]
-Vbusinesslogic.BLFacadeImplementation#downloadImage(Ljava/lang/String;)Ljava/awt/Image;136
+Vbusinesslogic.BLFacadeImplementation#downloadImage(Ljava/lang/String;)Ljava/awt/Image;137
 
-(106:5)-(114:6)137
+(106:5)-(114:6)138
 
-downloadImage138
+downloadImage139
 
-java.awt.Image140
+java.awt.Image141
+$
+src/main/resources/images/Ôøø142
 
-javax.imageio.ImageIO142
+javax.imageio.ImageIO144
 O
-Hjavax.imageio.ImageIO#read(Ljava/io/File;)Ljava/awt/image/BufferedImage;144
+Hjavax.imageio.ImageIO#read(Ljava/io/File;)Ljava/awt/image/BufferedImage;146
 
-java.io.IOException146
+java.io.IOException148
 c
-\java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V148
+\java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V150
 
-ARG_1149
+ARG_1151
 (
-!Error al descargar la imagen: {0}150
+!Error al descargar la imagen: {0}152
 
-java.util.logging.Level152
+java.util.logging.Level154
 &
-java.util.logging.Level.WARNING154
+java.util.logging.Level.WARNING156
 i
-bbusinesslogic.BLFacadeImplementation#isLogged(Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;156
+bbusinesslogic.BLFacadeImplementation#isLogged(Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;158
 
-(116:5)-(121:6)157
+(116:5)-(121:6)159
 
-isLogged158
+isLogged160
 
-domain.Seller160
+domain.Seller162
 Z
-SdataAccess.DataAccess#isLogged(Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;162
+SdataAccess.DataAccess#isLogged(Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;164
 ê
-àbusinesslogic.BLFacadeImplementation#isRegister(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;164
+àbusinesslogic.BLFacadeImplementation#isRegister(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;166
 
-(123:5)-(128:6)165
+(123:5)-(128:6)167
 
 
-isRegister166
+isRegister168
 Ä
-ydataAccess.DataAccess#isRegister(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;168
+ydataAccess.DataAccess#isRegister(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldomain/Seller;170
 ^
-Wbusinesslogic.BLFacadeImplementation#buyProduct(Ljava/lang/String;Ljava/lang/Integer;)Z170
+Wbusinesslogic.BLFacadeImplementation#buyProduct(Ljava/lang/String;Ljava/lang/Integer;)Z172
 
-(129:5)-(135:6)171
+(129:5)-(135:6)173
 
 
-buyProduct172
+buyProduct174
 
-java.lang.Integer174
+java.lang.Integer176
 O
-HdataAccess.DataAccess#buyProduct(Ljava/lang/String;Ljava/lang/Integer;)Z176
+HdataAccess.DataAccess#buyProduct(Ljava/lang/String;Ljava/lang/Integer;)Z178
 a
-Zbusinesslogic.BLFacadeImplementation#getPurchasedItems(Ljava/lang/String;)Ljava/util/List;178
+Zbusinesslogic.BLFacadeImplementation#getPurchasedItems(Ljava/lang/String;)Ljava/util/List;180
 
-(136:5)-(142:3)179
+(136:5)-(142:3)181
 
-getPurchasedItems180
+getPurchasedItems182
 R
-KdataAccess.DataAccess#getPurchasedItems(Ljava/lang/String;)Ljava/util/List;182
+KdataAccess.DataAccess#getPurchasedItems(Ljava/lang/String;)Ljava/util/List;184
 J
-Cbusinesslogic.BLFacadeImplementation#addMoney(Ljava/lang/String;F)Z184
+Cbusinesslogic.BLFacadeImplementation#addMoney(Ljava/lang/String;F)Z186
 
-(144:5)-(150:6)185
+(144:5)-(150:6)187
 
-addMoney186
+addMoney188
 ;
-4dataAccess.DataAccess#addMoney(Ljava/lang/String;F)Z188
+4dataAccess.DataAccess#addMoney(Ljava/lang/String;F)Z190
 I
-Bbusinesslogic.BLFacadeImplementation#getMoney(Ljava/lang/String;)F190
+Bbusinesslogic.BLFacadeImplementation#getMoney(Ljava/lang/String;)F192
 
-(152:5)-(158:6)191
+(152:5)-(158:6)193
 
-getMoney192
+getMoney194
 :
-3dataAccess.DataAccess#getMoney(Ljava/lang/String;)F194
+3dataAccess.DataAccess#getMoney(Ljava/lang/String;)F196
 \
-Ubusinesslogic.BLFacadeImplementation#getSoldItems(Ljava/lang/String;)Ljava/util/List;196
+Ubusinesslogic.BLFacadeImplementation#getSoldItems(Ljava/lang/String;)Ljava/util/List;198
 
-(160:5)-(166:6)197
+(160:5)-(166:6)199
 
-getSoldItems198
+getSoldItems200
 M
-FdataAccess.DataAccess#getSoldItems(Ljava/lang/String;)Ljava/util/List;200
+FdataAccess.DataAccess#getSoldItems(Ljava/lang/String;)Ljava/util/List;202
 p
-ibusinesslogic.BLFacadeImplementation#reportSale(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)Z202
+ibusinesslogic.BLFacadeImplementation#reportSale(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)Z204
 
-(168:5)-(174:6)203
+(168:5)-(174:6)205
 
 
-reportSale204
+reportSale206
 a
-ZdataAccess.DataAccess#reportSale(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)Z206
+ZdataAccess.DataAccess#reportSale(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)Z208
 N
-Gbusinesslogic.BLFacadeImplementation#getReportedSales()Ljava/util/List;208
+Gbusinesslogic.BLFacadeImplementation#getReportedSales()Ljava/util/List;210
 
-(176:5)-(182:6)209
+(176:5)-(182:6)211
 
-getReportedSales210
+getReportedSales212
 ?
-8dataAccess.DataAccess#getReportedSales()Ljava/util/List;212
-a
-Zbusinesslogic.BLFacadeImplementation#resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)Z214
+8dataAccess.DataAccess#getReportedSales()Ljava/util/List;214
+Z
+Sbusinesslogic.BLFacadeImplementation#resolveReport(Ljava/lang/Integer;LSalaketa;Z)Z216
 
-(184:5)-(190:6)215
+(184:5)-(190:6)217
 
-resolveReport216
-
-domain.Salaketa218
-R
-KdataAccess.DataAccess#resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)Z220
+resolveReport218
+'
+ Recovered#typeBindingLSalaketa;0220
+K
+DdataAccess.DataAccess#resolveReport(Ljava/lang/Integer;LSalaketa;Z)Z222
 v
-obusinesslogic.BLFacadeImplementation#addErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Z222
+obusinesslogic.BLFacadeImplementation#addErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Z224
 
-(192:5)-(197:6)223
+(192:5)-(197:6)225
 
-addErreklamazioa224
+addErreklamazioa226
 g
-`dataAccess.DataAccess#addErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Z226
+`dataAccess.DataAccess#addErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Z228
 M
-Fbusinesslogic.BLFacadeImplementation#getClaimedSales()Ljava/util/List;228
+Fbusinesslogic.BLFacadeImplementation#getClaimedSales()Ljava/util/List;230
 
-(198:5)-(203:6)229
+(198:5)-(203:6)231
 
-getClaimedSales230
+getClaimedSales232
 >
-7dataAccess.DataAccess#getClaimedSales()Ljava/util/List;232
+7dataAccess.DataAccess#getClaimedSales()Ljava/util/List;234
 W
-Pbusinesslogic.BLFacadeImplementation#resolveErreklamazioa(Ljava/lang/Integer;Z)Z234
+Pbusinesslogic.BLFacadeImplementation#resolveErreklamazioa(Ljava/lang/Integer;Z)Z236
 
-(204:5)-(209:6)235
+(204:5)-(209:6)237
 
-resolveErreklamazioa236
+resolveErreklamazioa238
 H
-AdataAccess.DataAccess#resolveErreklamazioa(Ljava/lang/Integer;Z)Z238
+AdataAccess.DataAccess#resolveErreklamazioa(Ljava/lang/Integer;Z)Z240
 g
-`businesslogic.BLFacadeImplementation#isAdmin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Admin;240
+`businesslogic.BLFacadeImplementation#isAdmin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Admin;242
 
-(211:5)-(217:6)241
+(211:5)-(217:6)243
 
-isAdmin242
+isAdmin244
 
-domain.Admin244
+domain.Admin246
 X
-QdataAccess.DataAccess#isAdmin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Admin;246
+QdataAccess.DataAccess#isAdmin(Ljava/lang/String;Ljava/lang/String;)Ldomain/Admin;248
 _
-Xbusinesslogic.BLFacadeImplementation#addToBasket(Ljava/lang/String;Ljava/lang/Integer;)Z248
+Xbusinesslogic.BLFacadeImplementation#addToBasket(Ljava/lang/String;Ljava/lang/Integer;)Z250
 
-(219:5)-(225:6)249
+(219:5)-(225:6)251
 
-addToBasket250
+addToBasket252
 P
-IdataAccess.DataAccess#addToBasket(Ljava/lang/String;Ljava/lang/Integer;)Z252
+IdataAccess.DataAccess#addToBasket(Ljava/lang/String;Ljava/lang/Integer;)Z254
 d
-]businesslogic.BLFacadeImplementation#removeFromBasket(Ljava/lang/String;Ljava/lang/Integer;)Z254
+]businesslogic.BLFacadeImplementation#removeFromBasket(Ljava/lang/String;Ljava/lang/Integer;)Z256
 
-(227:5)-(233:6)255
+(227:5)-(233:6)257
 
-removeFromBasket256
+removeFromBasket258
 U
-NdataAccess.DataAccess#removeFromBasket(Ljava/lang/String;Ljava/lang/Integer;)Z258
+NdataAccess.DataAccess#removeFromBasket(Ljava/lang/String;Ljava/lang/Integer;)Z260
 Y
-Rbusinesslogic.BLFacadeImplementation#getBasket(Ljava/lang/String;)Ljava/util/List;260
+Rbusinesslogic.BLFacadeImplementation#getBasket(Ljava/lang/String;)Ljava/util/List;262
 
-(235:5)-(241:6)261
+(235:5)-(241:6)263
 
-	getBasket262
+	getBasket264
 J
-CdataAccess.DataAccess#getBasket(Ljava/lang/String;)Ljava/util/List;264
+CdataAccess.DataAccess#getBasket(Ljava/lang/String;)Ljava/util/List;266
 J
-Cbusinesslogic.BLFacadeImplementation#buyBasket(Ljava/lang/String;)Z266
+Cbusinesslogic.BLFacadeImplementation#buyBasket(Ljava/lang/String;)Z268
 
-(243:5)-(249:6)267
+(243:5)-(249:6)269
 
-	buyBasket268
+	buyBasket270
 ;
-4dataAccess.DataAccess#buyBasket(Ljava/lang/String;)Z270
+4dataAccess.DataAccess#buyBasket(Ljava/lang/String;)Z272
 r
-kbusinesslogic.BLFacadeImplementation#createEskaera(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z272
+kbusinesslogic.BLFacadeImplementation#createEskaera(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z274
 
-(250:5)-(256:6)273
+(250:5)-(256:6)275
 
-createEskaera274
+createEskaera276
 c
-\dataAccess.DataAccess#createEskaera(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z276
+\dataAccess.DataAccess#createEskaera(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z278
 M
-Fbusinesslogic.BLFacadeImplementation#getOpenEskaerak()Ljava/util/List;278
+Fbusinesslogic.BLFacadeImplementation#getOpenEskaerak()Ljava/util/List;280
 
-(258:5)-(264:6)279
+(258:5)-(264:6)281
 
-getOpenEskaerak280
-
-domain.Eskaera282
+getOpenEskaerak282
+&
+Recovered#typeBindingLEskaera;0284
 >
-7dataAccess.DataAccess#getOpenEskaerak()Ljava/util/List;284
+7dataAccess.DataAccess#getOpenEskaerak()Ljava/util/List;286
 s
-lbusinesslogic.BLFacadeImplementation#addEskaintza(Ljava/lang/Integer;Ljava/lang/String;FLjava/lang/String;)Z286
+lbusinesslogic.BLFacadeImplementation#addEskaintza(Ljava/lang/Integer;Ljava/lang/String;FLjava/lang/String;)Z288
 
-(266:5)-(272:6)287
+(266:5)-(272:6)289
 
-addEskaintza288
+addEskaintza290
 d
-]dataAccess.DataAccess#addEskaintza(Ljava/lang/Integer;Ljava/lang/String;FLjava/lang/String;)Z290
+]dataAccess.DataAccess#addEskaintza(Ljava/lang/Integer;Ljava/lang/String;FLjava/lang/String;)Z292
 d
-]businesslogic.BLFacadeImplementation#acceptEskaintza(Ljava/lang/Integer;Ljava/lang/Integer;)Z292
+]businesslogic.BLFacadeImplementation#acceptEskaintza(Ljava/lang/Integer;Ljava/lang/Integer;)Z294
 
-(274:5)-(280:6)293
+(274:5)-(280:6)295
 
-acceptEskaintza294
+acceptEskaintza296
 U
-NdataAccess.DataAccess#acceptEskaintza(Ljava/lang/Integer;Ljava/lang/Integer;)Z296
+NdataAccess.DataAccess#acceptEskaintza(Ljava/lang/Integer;Ljava/lang/Integer;)Z298
 P
-Ibusinesslogic.BLFacadeImplementation#confirmArrival(Ljava/lang/Integer;)Z298
+Ibusinesslogic.BLFacadeImplementation#confirmArrival(Ljava/lang/Integer;)Z300
 
-(281:5)-(287:6)299
+(281:5)-(287:6)301
 
-confirmArrival300
+confirmArrival302
 A
-:dataAccess.DataAccess#confirmArrival(Ljava/lang/Integer;)Z302J
+:dataAccess.DataAccess#confirmArrival(Ljava/lang/Integer;)Z304J
 
 1
 12
@@ -416,16 +420,16 @@ A
 4 Z
 
 5
-5768j‰"
+5768jÓ"
 
 38
 383940
 
-181
-18118240
+183
+18318440
 T
-253M
-25325440 *
+255M
+25525640 *
 1‰ ‰($28:5B&
 
 
@@ -433,54 +437,40 @@ T
 12
 
 13
-255
+257
 
 15
-256
+258
 
-68
-686919
+69
+697019
 
-123
-12312440
+124
+12412540
 
-193
-19319440
+221
+22122240
 
-295
-29529640
-T
-213M
-21321440 *
-1π π(!28:5B&
-
-
-11
-12
-
-13
-215
-
-15
-216
+195
+19519640
 
-133
-13313440
+297
+29729840
 
-173
-17317419
+134
+13413540
 
-251
-25125240
+175
+17517619
 
-281
-28128219
+253
+25325440
 
 46
 464740
 
-101
-10110240
+102
+10210340
 M
 27G
 272829 *
@@ -498,14 +488,14 @@ M
 15
 32
 
-211
-21121240
-
-99
-9910040
+213
+21321440
+
+100
+10010140
 T
-247M
-24724840 *
+249M
+24925040 *
 1‹ ‹(28:5B&
 
 
@@ -513,16 +503,16 @@ T
 12
 
 13
-249
+251
 
 15
-250
+252
 
-81
-818219
+82
+828319
 T
-239M
-23924040 *
+241M
+24124240 *
 1‘ ‘(28:5B&
 
 
@@ -530,13 +520,13 @@ T
 12
 
 13
-241
+243
 
 15
-242
+244
 R
-135K
-13513640 *
+136K
+13613740 *
 1j j(*28:5B&
 
 
@@ -544,22 +534,22 @@ R
 12
 
 13
-137
+138
 
 15
-138
+139
 
-153
-15315419
+155
+15515619
 
-161
-16116240
+163
+16316440
 
-147
-14714840
+149
+14915040
 T
-201M
-20120240 *
+203M
+20320440 *
 1© ©(28:5B&
 
 
@@ -567,16 +557,19 @@ T
 12
 
 13
-203
+205
 
 15
-204
+206
+
+96
+969719
 
-263
-26326440
+265
+26526640
 T
-195M
-19519640 *
+197M
+19719840 *
 1° °(#28:5B&
 
 
@@ -584,13 +577,13 @@ T
 12
 
 13
-197
+199
 
 15
-198
+200
 R
-111K
-11111240 *
+112K
+11211340 *
 1J J(&28:5B&
 
 
@@ -598,16 +591,16 @@ R
 12
 
 13
-113
+114
 
 15
-114
+115
 
-199
-19920040
+201
+20120240
 T
-277M
-27727840 *
+279M
+27928040 *
 1É É()28:5B&
 
 
@@ -615,13 +608,13 @@ T
 12
 
 13
-279
+281
 
 15
-280
+282
 T
-169M
-16917040 *
+171M
+17117240 *
 1Ç Ç(28:5B&
 
 
@@ -629,13 +622,13 @@ T
 12
 
 13
-171
+173
 
 15
-172
+174
 T
-221M
-22122240 *
+223M
+22322440 *
 1¿ ¿(/28:5B&
 
 
@@ -643,13 +636,13 @@ T
 12
 
 13
-223
+225
 
 15
-224
+226
 T
-233M
-23323440 *
+235M
+23523640 *
 1Ã Ã(328:5B&
 
 
@@ -657,13 +650,13 @@ T
 12
 
 13
-235
+237
 
 15
-236
+238
 T
-291M
-29129240 *
+293M
+29329440 *
 1ì ì(#28:5B&
 
 
@@ -671,13 +664,13 @@ T
 12
 
 13
-293
+295
 
 15
-294
+296
 T
-189M
-18919040 *
+191M
+19119240 *
 1ô ô(28:5B&
 
 
@@ -685,16 +678,16 @@ T
 12
 
 13
-191
+193
 
 15
-192
+194
 
-225
-22522640
+227
+22722840
 T
-271M
-27127240 *
+273M
+27327440 *
 1˚ ˚(!28:5B&
 
 
@@ -702,16 +695,16 @@ T
 12
 
 13
-273
+275
 
 15
-274
+276
 
-283
-28328440
+285
+28528640
 T
-259M
-25926040 *
+261M
+26126240 *
 1Ï Ï( 28:5B&
 
 
@@ -719,22 +712,22 @@ T
 12
 
 13
-261
+263
 
 15
-262
+264
 
 21
 212219
 
-269
-26927040
+271
+27127240
 
-109
-10911040
+110
+11011140
 T
-227M
-22722840 *
+229M
+22923040 *
 1∆" ∆(128:5B&
 
 
@@ -742,19 +735,19 @@ T
 12
 
 13
-229
+231
 
 15
-230
+232
 
-87
-878819
+88
+888919
 
-115
-11511640
+116
+11611740
 R
-125K
-12512640 *
+126K
+12612740 *
 1X X(28:5B&
 
 
@@ -762,28 +755,25 @@ R
 12
 
 13
-127
+128
 
 15
-128
+129
 
-91
-919219
+92
+929319
 
 42
 424319
 
-187
-18718840
-
-95
-959619
+189
+18919040
 
-257
-25725840
+259
+25926040
 
-301
-30130240
+303
+30330440
 G
 8B
 8910 *
@@ -801,8 +791,8 @@ G
 15
 16
 R
-117K
-11711840 *
+118K
+11811940 *
 1S" S()28:5B&
 
 
@@ -810,13 +800,13 @@ R
 12
 
 13
-119
+120
 
 15
-120
+121
 R
-163K
-16316440 *
+165K
+16516640 *
 1{ {((28:5B&
 
 
@@ -824,19 +814,19 @@ R
 12
 
 13
-165
+167
 
 15
-166
+168
 
-205
-20520640
+207
+20720840
 
-145
-14514619
+147
+14714819
 T
-285M
-28528640 *
+287M
+28728840 *
 1ã ã( 28:5B&
 
 
@@ -844,22 +834,22 @@ T
 12
 
 13
-287
+289
 
 15
-288
+290
 
-237
-23723840
+239
+23924040
 
-85
-858619
+86
+868710
 
 57
-575819
+575810
 T
-207M
-20720840 *
+209M
+20921040 *
 1± ±('28:5B&
 
 
@@ -867,13 +857,13 @@ T
 12
 
 13
-209
+211
 
 15
-210
+212
 M
-72G
-727340 *
+73G
+737440 *
 1* *("28:5B$
 
 
@@ -882,17 +872,31 @@ M
 
 
 13
-74
+75
 
 
 15
 16
 
-83
-838419
+84
+848519
+T
+215M
+21521640 *
+1π π(!28:5B&
+
+
+11
+12
+
+13
+217
+
+15
+218
 M
-77G
-777840 *
+78G
+787940 *
 14 4(28:5B$
 
 
@@ -901,22 +905,22 @@ M
 
 
 13
-79
+80
 
 
 15
-80
+81
 
-70
-707119
+71
+717219
+
+145
+14514640
 
 143
-14314440
-
-141
-14114219
-M
-59G
+14314419
+U
+59O
 596040 *
 1%	 %(28:5B$
 
@@ -930,28 +934,27 @@ M
 
 
 15
-16
+16R
+
+62
 
-231
-23123240
+233
+23323440
 
-121
-12112219
+122
+12212319
 
-139
-13914019
+140
+14014119
 
-64
-646540
-
-217
-21721819
+65
+656640
 
 33
 333419
 R
-129K
-12913040 *
+130K
+13013140 *
 1b b(28:5B&
 
 
@@ -959,16 +962,16 @@ R
 12
 
 13
-131
+132
 
 15
-132
+133
 
-167
-16716840
+169
+16917040
 T
-297M
-29729840 *
+299M
+29930040 *
 1ö ö("28:5B&
 
 
@@ -976,19 +979,22 @@ T
 12
 
 13
-299
+301
 
 15
-300
+302
 
-107
-10710819
+108
+10810919
 
-289
-28929040
+291
+29129240
+
+94
+949519
 R
-155K
-15515640 *
+157K
+15715840 *
 1t t(&28:5B&
 
 
@@ -996,16 +1002,16 @@ R
 12
 
 13
-157
+159
 
 15
-158
+160
 
-97
-979840
+98
+989940
 R
-103K
-10310440 *
+104K
+10410540 *
 1? ?(28:5B&
 
 
@@ -1013,13 +1019,13 @@ R
 12
 
 13
-105
+106
 
 15
-106
+107
 T
-177M
-17717840 *
+179M
+17918040 *
 1â â(%28:5B&
 
 
@@ -1027,13 +1033,13 @@ T
 12
 
 13
-179
+181
 
 15
-180
+182
 
-245
-24524640
+247
+24724840
 M
 48G
 484929 *
@@ -1051,23 +1057,20 @@ M
 15
 51
 
-219
-21922040
-
-275
-27527640
+277
+27727840
 
-89
-899019
-
-93
-939419
+90
+909119
 
-243
-24324419
+245
+24524619
+
+283
+28328419
 T
-183M
-18318440 *
+185M
+18518640 *
 1ë ë(28:5B&
 
 
@@ -1075,19 +1078,19 @@ T
 12
 
 13
-185
+187
 
 15
-186
+188
 
-151
-15115219
+153
+15315419
 
 24
 242519
 
-175
-17517640
+177
+17717840
 M
 52G
 525329 *
@@ -1108,11 +1111,11 @@ M
 17
 171819
 
-62
-626319
+63
+636419
 T
-265M
-26526640 *
+267M
+26726840 *
 1Ù Ù(28:5B&
 
 
@@ -1120,16 +1123,19 @@ T
 12
 
 13
-267
+269
 
 15
-268
+270
 
-159
-15916019
+219
+21922019
+
+161
+16116219
 
 44
-444519r°Ø
+444519r˝Æ
 
 81720*
 11 (9
@@ -1193,28 +1199,25 @@ T
 
 525726*
 1#" #(+
-
-59841*
-1%	 %(
 
-596237*
+596337*
 1& &(
 '
-596441*
+596541*
 1& &(2
 
 
-66
-67
+67
+68
 
-596826*
+596926*
 1& &(	
 
-596226*
+596326*
 1&
  &(
 
-597037*
+597137*
 1&
  &(
 
@@ -1227,2218 +1230,2218 @@ T
 595741*
 1' '(
 
-725775*
+735776*
 1*# *(-
-
-72841*
-1* *("
 
-725735*
+735735*
 1*. *(0
 
-725726*
+735726*
 1*# *(-
 
-726237*
+736337*
 1+ +(
 '
-726441*
+736541*
 1+ +(2
 
 
-66
-76
+67
+77
 
-726826*
+736926*
 1+ +(	
 
-726226*
+736326*
 1+
  +(
 
-727037*
+737137*
 1+
  +(
 
-725726*
+735726*
 1, ,(
 
-725237*
+735237*
 1, ,(
 
-778136*
+788236*
 14	 4(
 
-774275*
+784276*
 14 4(
 
-774275*
+784276*
 14' 4(-
 
-778375*
+788476*
 14S 4(W
 
-774275*
+784276*
 14a 4(g
 
-778575*
+788676*
 14u 4(y
 
-778723*
+788823*
 13 3(
 
-778926*
+789026*
 13 3(
 
-778126*
+788226*
 14	 4(
 
-774235*
+784235*
 14  4(%
 
-774226*
+784226*
 14 4(
 
-774235*
+784235*
 14. 4(9
 
-774226*
+784226*
 14' 4(-
 
-778335*
+788435*
 14X 4(_
 
-778326*
+788426*
 14S 4(W
 
-774235*
+784235*
 14h 4(s
 
-774226*
+784226*
 14a 4(g
 
-778535*
+788635*
 14z 4(~
 
-778526*
+788626*
 14u 4(y
 
-779126*
+789226*
 14à 4(†
 
-779326*
+789426*
 14¢ 4(ø
 
-779526*
+789626*
 14¡ 4(⁄
 
-775737*
+785737*
 15 5(
 
-779741*
+789841*
 15 5(
 
-775237*
+785237*
 15 5(
 
-775726*
+785726*
 15 5(
 
-775237*
+785237*
 15 5(
 
-778135*
+788235*
 16 6(
 
-778126*
+788226*
 16 6(
 
-778136*
+788236*
 16 6($
 
-775737*
+785737*
 16 6($
-
-779941*
+
+7810041*
 16 6($
 
-775237*
+785237*
 16 6(
 
-775726*
+785726*
 16 6(
 
-775237*
+785237*
 16 6(
 
-775737*
+785737*
 17 7(
 
-7710141*
+7810241*
 17 7(
 
-775237*
+785237*
 17 7(
 
-775726*
+785726*
 17 7(
 
-775237*
+785237*
 17 7(
 
-10310736*
+10410836*
 1?	 ?(
 
-1034275*
+1044276*
 1? ?(#
 
-1038723*
+1048823*
 1> >(
 
-1038926*
+1049026*
 1> >(
 
-10310726*
+10410826*
 1?	 ?(
 
-1038126*
+1048226*
 1? ?(
 
-1034235*
+1044235*
 1?$ ?((
 
-1034226*
+1044226*
 1? ?(#
 
-1035737*
+1045737*
 1@ @(
 
-1039741*
+1049841*
 1@ @(
 
-1035237*
+1045237*
 1@ @(
 
-1035726*
+1045726*
 1@ @(
 
-1035237*
+1045237*
 1@ @(
 
-10310735*
+10410835*
 1A A(
 
-10310726*
+10410826*
 1A A(
 
-1038126*
+1048226*
 1A A(
 
-10310736*
+10410836*
 1A A('
 
-1035737*
+1045737*
 1A A('
 
-10310941*
+10411041*
 1A A('
 
-1035237*
+1045237*
 1A A(
 
-1035726*
+1045726*
 1A A(
 
-1035237*
+1045237*
 1A A(
 
-1035737*
+1045737*
 1B B(
 
-10310141*
+10410241*
 1B B(
 
-1035237*
+1045237*
 1B B(
 
-1035726*
+1045726*
 1B B(
 
-1035237*
+1045237*
 1B B(
 
-11110736*
+11210836*
 1J
  J(
 
-1114275*
+1124276*
 1J' J(-
 
-1118375*
+1128476*
 1J4 J(8
 
-1118723*
+1128823*
 1I I(
 
-1118926*
+1129026*
 1I I(
 
-11110726*
+11210826*
 1J
  J(
 
-1118126*
+1128226*
 1J J(
 
-1114235*
+1124235*
 1J. J(2
 
-1114226*
+1124226*
 1J' J(-
 
-1118335*
+1128435*
 1J9 J(@
 
-1118326*
+1128426*
 1J4 J(8
 
-1115737*
+1125737*
 1K K(
 
-1119741*
+1129841*
 1K K(
 
-1115237*
+1125237*
 1K K(
 
-1115726*
+1125726*
 1K K(
 
-1115237*
+1125237*
 1K K(
 
-11110735*
+11210835*
 1L L(
 
-11110726*
+11210826*
 1L L(
 
-1118126*
+1128226*
 1L	 L(
 
-11110736*
+11210836*
 1L L(1
 
-1115737*
+1125737*
 1L L(1
 
-11111541*
+11211641*
 1L  L(1
 
-1115237*
+1125237*
 1L L(
 
-1115726*
+1125726*
 1L L(
 
-1115237*
+1125237*
 1L L(
 
-1115737*
+1125737*
 1M M(
 
-11110141*
+11210241*
 1M M(
 
-1115237*
+1125237*
 1M M(
 
-1115726*
+1125726*
 1M M(
 
-1115237*
+1125237*
 1M M(
 
-11712136*
+11812236*
 1S S(!
 
-1174275*
+1184276*
 1S* S(0
 
-1178723*
+1188823*
 1S S(
 
-1178926*
+1189026*
 1S S(
 
-11712126*
+11812226*
 1S S(!
 
-1174235*
+1184235*
 1S1 S(9
 
-1174226*
+1184226*
 1S* S(0
 
-11712136*
+11812236*
 1T
  T(
 
-1175737*
+1185737*
 1T
  T(
 
-11712341*
+11812441*
 1T T(
 
-1175237*
+1185237*
 1T
  T(
 
-1175726*
+1185726*
 1T
  T(
 
-1175237*
+1185237*
 1T
  T(
 
-1255735*
+1265735*
 1Y Y(
 
-1255726*
+1265726*
 1Y Y(
 
-1255741*
+1265741*
 1Y Y((
 
-1255737*
+1265737*
 1Z Z(
 
-12510141*
+12610241*
 1Z Z(
 
-1298723*
+1308823*
 1a a(
 
-1298926*
+1309026*
 1a a(
 
-1295737*
+1305737*
 1c c(
 
-1299741*
+1309841*
 1c c(
 
-1295237*
+1305237*
 1c c(
 
-1295726*
+1305726*
 1c c(
 
-1295237*
+1305237*
 1c c(
 
-1295737*
+1305737*
 1d d(
 
-12913341*
+13013441*
 1d d(
 
-1295237*
+1305237*
 1d d(
 
-1295726*
+1305726*
 1d d(
 
-1295237*
+1305237*
 1d d(
 
-1295737*
+1305737*
 1e e(
 
-12910141*
+13010241*
 1e e(
 
-1295237*
+1305237*
 1e e(
 
-1295726*
+1305726*
 1e e(
 
-1295237*
+1305237*
 1e e(
 
-13513936*
+13614036*
 1j j(
 
-1354275*
+1364276*
 1j+ j(1
 
-1358723*
+1368823*
 1j j(
 
-1358926*
+1369026*
 1j j(
 
-13513926*
+13614026*
 1j j(
 
-1354235*
+1364235*
 1j2 j(;
 
-1354226*
+1364226*
 1j+ j(1
 
-1358535*
+1368635*
 1k k(
 
-1358526*
+1368626*
 1k	 k(
+)
+1368641*
+1k k(2
+
+67
+142
 
-1358541*
-1k k(
-
-1354226*
+1364226*
 1k k('
 
-1354837*
+1364837*
 1k k('
 
-13512136*
+13612236*
 1m m( 
 
-13514137*
+13614337*
 1m m( 
 
-13514341*
+13614541*
 1m m( 
 
-13514126*
+13614326*
 1m m(
 
-13514535*
+13614735*
 1n n(
 
-13514526*
+13614726*
 1n n(
 
-1353337*
+1363337*
 1o
  o(
 +
-13514741*
+13614941*
 1o o(2
 
-149
-150
+151
+152
 
-1352737*
+1362737*
 1o
  o(
 
-1353326*
+1363326*
 1o
  o(
 
-1352737*
+1362737*
 1o
  o(
 
-13515126*
+13615326*
 1o o(
 
-13515126*
+13615326*
 1o o("
 
-13515337*
+13615537*
 1o o("
 
-15515936*
+15716136*
 1t t(
 
-1554275*
+1574276*
 1t' t(-
 
-1554275*
+1574276*
 1t3 t(9
 
-1558723*
+1578823*
 1t t(
 
-1558926*
+1579026*
 1t t(
 
-15515926*
+15716126*
 1t t(
 
-1554235*
+1574235*
 1t. t(1
 
-1554226*
+1574226*
 1t' t(-
 
-1554235*
+1574235*
 1t: t(>
 
-1554226*
+1574226*
 1t3 t(9
 
-1555737*
+1575737*
 1u u(
 
-1559741*
+1579841*
 1u u(
 
-1555237*
+1575237*
 1u u(
 
-1555726*
+1575726*
 1u u(
 
-1555237*
+1575237*
 1u u(
 
-15515935*
+15716135*
 1v
  v(
 
-15515926*
+15716126*
 1v v(	
 
-15515936*
+15716136*
 1v v(
 
-1555737*
+1575737*
 1v v(
 
-15516141*
+15716341*
 1v v(
 
-1555237*
+1575237*
 1v v(
 
-1555726*
+1575726*
 1v v(
 
-1555237*
+1575237*
 1v v(
 
-1555737*
+1575737*
 1w w(
 
-15510141*
+15710241*
 1w w(
 
-1555237*
+1575237*
 1w w(
 
-1555726*
+1575726*
 1w w(
 
-1555237*
+1575237*
 1w w(
 
-16315936*
+16516136*
 1{ {(
 
-1634275*
+1654276*
 1{) {(/
 
-1634275*
+1654276*
 1{> {(D
 
-1634275*
+1654276*
 1{O {(U
 
-1634275*
+1654276*
 1{\ {(b
 
-1638723*
+1658823*
 1{ {(
 
-1638926*
+1659026*
 1{ {(
 
-16315926*
+16516126*
 1{ {(
 
-1634235*
+1654235*
 1{0 {(<
 
-1634226*
+1654226*
 1{) {(/
 
-1634235*
+1654235*
 1{E {(M
 
-1634226*
+1654226*
 1{> {(D
 
-1634235*
+1654235*
 1{V {(Z
 
-1634226*
+1654226*
 1{O {(U
 
-1634235*
+1654235*
 1{c {(n
 
-1634226*
+1654226*
 1{\ {(b
 
-1635737*
+1655737*
 1| |(
 
-1639741*
+1659841*
 1| |(
 
-1635237*
+1655237*
 1| |(
 
-1635726*
+1655726*
 1| |(
 
-1635237*
+1655237*
 1| |(
 
-16315935*
+16516135*
 1}
  }(
 
-16315926*
+16516126*
 1} }(	
 
-16315936*
+16516136*
 1} }(!
 
-1635737*
+1655737*
 1} }(!
 
-16316741*
+16516941*
 1} }(!
 
-1635237*
+1655237*
 1} }(
 
-1635726*
+1655726*
 1} }(
 
-1635237*
+1655237*
 1} }(
 
-1635737*
+1655737*
 1~ ~(
 
-16310141*
+16510241*
 1~ ~(
 
-1635237*
+1655237*
 1~ ~(
 
-1635726*
+1655726*
 1~ ~(
 
-1635237*
+1655237*
 1~ ~(
 
-1694275*
+1714276*
 1Ç Ç(%
 
-16917375*
+17117576*
 1Ç2 Ç(9
 
-1698723*
+1718823*
 1Å Å(
 
-1698926*
+1719026*
 1Å Å(
 
-1694235*
+1714235*
 1Ç& Ç(0
 
-1694226*
+1714226*
 1Ç Ç(%
 
-16917335*
+17117535*
 1Ç: Ç(D
 
-16917326*
+17117526*
 1Ç2 Ç(9
 
-1695737*
+1715737*
 1É	 É(
 
-1699741*
+1719841*
 1É É(
 
-1695237*
+1715237*
 1É	 É(
 
-1695726*
+1715726*
 1É	 É(
 
-1695237*
+1715237*
 1É	 É(
 
-1695737*
+1715737*
 1Ñ Ñ(/
 
-16917541*
+17117741*
 1Ñ% Ñ(/
 
-1695237*
+1715237*
 1Ñ Ñ($
 
-1695726*
+1715726*
 1Ñ Ñ($
 
-1695237*
+1715237*
 1Ñ Ñ($
 
-1695737*
+1715737*
 1Ö	 Ö(
 
-16910141*
+17110241*
 1Ö Ö(
 
-1695237*
+1715237*
 1Ö	 Ö(
 
-1695726*
+1715726*
 1Ö	 Ö(
 
-1695237*
+1715237*
 1Ö	 Ö(
 
-17710736*
+17910836*
 1â	 â(
 
-1774275*
+1794276*
 1â& â(,
 
-1778723*
+1798823*
 1à à(
 
-1778926*
+1799026*
 1à à(
 
-17710726*
+17910826*
 1â	 â(
 
-1778126*
+1798226*
 1â â(
 
-1774235*
+1794235*
 1â- â(2
 
-1774226*
+1794226*
 1â& â(,
 
-1775737*
+1795737*
 1ä ä(
 
-1779741*
+1799841*
 1ä ä(
 
-1775237*
+1795237*
 1ä ä(
 
-1775726*
+1795726*
 1ä ä(
 
-1775237*
+1795237*
 1ä ä(
 
-17710735*
+17910835*
 1ã ã(
 
-17710726*
+17910826*
 1ã ã(
 
-1778126*
+1798226*
 1ã ã(
 
-17710736*
+17910836*
 1ã ã(1
 
-1775737*
+1795737*
 1ã ã(1
 
-17718141*
+17918341*
 1ã  ã(1
 
-1775237*
+1795237*
 1ã ã(
 
-1775726*
+1795726*
 1ã ã(
 
-1775237*
+1795237*
 1ã ã(
 
-1775737*
+1795737*
 1å å(
 
-17710141*
+17910241*
 1å å(
 
-1775237*
+1795237*
 1å å(
 
-1775726*
+1795726*
 1å å(
 
-1775237*
+1795237*
 1å å(
 
-1834275*
+1854276*
 1ë ë(#
 
-1838723*
+1858823*
 1ê ê(
 
-1838926*
+1859026*
 1ê ê(
 
-1834235*
+1854235*
 1ë$ ë()
 
-1834226*
+1854226*
 1ë ë(#
 
-1835737*
+1855737*
 1í	 í(
 
-1839741*
+1859841*
 1í í(
 
-1835237*
+1855237*
 1í	 í(
 
-1835726*
+1855726*
 1í	 í(
 
-1835237*
+1855237*
 1í	 í(
 
-1835737*
+1855737*
 1ì ì()
 
-18318741*
+18518941*
 1ì! ì()
 
-1835237*
+1855237*
 1ì ì( 
 
-1835726*
+1855726*
 1ì ì( 
 
-1835237*
+1855237*
 1ì ì( 
 
-1835737*
+1855737*
 1î	 î(
 
-18310141*
+18510241*
 1î î(
 
-1835237*
+1855237*
 1î	 î(
 
-1835726*
+1855726*
 1î	 î(
 
-1835237*
+1855237*
 1î	 î(
 
-1894275*
+1914276*
 1ô ô(!
 
-1898723*
+1918823*
 1ò ò(
 
-1898926*
+1919026*
 1ò ò(
 
-1894235*
+1914235*
 1ô" ô('
 
-1894226*
+1914226*
 1ô ô(!
 
-1895737*
+1915737*
 1ö	 ö(
 
-1899741*
+1919841*
 1ö ö(
 
-1895237*
+1915237*
 1ö	 ö(
 
-1895726*
+1915726*
 1ö	 ö(
 
-1895237*
+1915237*
 1ö	 ö(
 
-1895737*
+1915737*
 1õ õ()
 
-18919341*
+19119541*
 1õ! õ()
 
-1895237*
+1915237*
 1õ õ( 
 
-1895726*
+1915726*
 1õ õ( 
 
-1895237*
+1915237*
 1õ õ( 
 
-1895737*
+1915737*
 1ú	 ú(
 
-18910141*
+19110241*
 1ú ú(
 
-1895237*
+1915237*
 1ú	 ú(
 
-1895726*
+1915726*
 1ú	 ú(
 
-1895237*
+1915237*
 1ú	 ú(
 
-19510736*
+19710836*
 1° °(
 
-1954275*
+1974276*
 1°$ °(*
 
-1958723*
+1978823*
 1† †(
 
-1958926*
+1979026*
 1† †(
 
-19510726*
+19710826*
 1° °(
 
-1958126*
+1978226*
 1° °(
 
-1954235*
+1974235*
 1°+ °(0
 
-1954226*
+1974226*
 1°$ °(*
 
-1955737*
+1975737*
 1¢ ¢(
 
-1959741*
+1979841*
 1¢ ¢(
 
-1955237*
+1975237*
 1¢ ¢(
 
-1955726*
+1975726*
 1¢ ¢(
 
-1955237*
+1975237*
 1¢ ¢(
 
-19510735*
+19710835*
 1£ £(
 
-19510726*
+19710826*
 1£ £(
 
 
-1958126*
+1978226*
 1£ £(
 
-19510736*
+19710836*
 1£ £(/
 
-1955737*
+1975737*
 1£ £(/
 
-19519941*
+19720141*
 1£# £(/
 
-1955237*
+1975237*
 1£ £("
 
-1955726*
+1975726*
 1£ £("
 
-1955237*
+1975237*
 1£ £("
 
-1955737*
+1975737*
 1§ §(
 
-19510141*
+19710241*
 1§ §(
 
-1955237*
+1975237*
 1§ §(
 
-1955726*
+1975726*
 1§ §(
 
-1955237*
+1975237*
 1§ §(
 
-2014275*
+2034276*
 1© ©(%
 
-20117375*
+20317576*
 1©0 ©(7
 
-2014275*
+2034276*
 1©D ©(J
 
-2018723*
+2038823*
 1® ®(
 
-2018926*
+2039026*
 1® ®(
 
-2014235*
+2034235*
 1©& ©(/
 
-2014226*
+2034226*
 1© ©(%
 
-20117335*
+20317535*
 1©8 ©(B
 
-20117326*
+20317526*
 1©0 ©(7
 
-2014235*
+2034235*
 1©K ©(Q
 
-2014226*
+2034226*
 1©D ©(J
 
-2015737*
+2035737*
 1™	 ™(
 
-2019741*
+2039841*
 1™ ™(
 
-2015237*
+2035237*
 1™	 ™(
 
-2015726*
+2035726*
 1™	 ™(
 
-2015237*
+2035237*
 1™	 ™(
 
-2015737*
+2035737*
 1´ ´(+
 
-20120541*
+20320741*
 1´! ´(+
 
-2015237*
+2035237*
 1´ ´( 
 
-2015726*
+2035726*
 1´ ´( 
 
-2015237*
+2035237*
 1´ ´( 
 
-2015737*
+2035737*
 1¨	 ¨(
 
-20110141*
+20310241*
 1¨ ¨(
 
-2015237*
+2035237*
 1¨	 ¨(
 
-2015726*
+2035726*
 1¨	 ¨(
 
-2015237*
+2035237*
 1¨	 ¨(
 
-20710736*
+20910836*
 1± ±(
 
-2078723*
+2098823*
 1∞ ∞(
 
-2078926*
+2099026*
 1∞ ∞(
 
-20710726*
+20910826*
 1± ±(
 
-2078126*
+2098226*
 1± ±(
 
-2075737*
+2095737*
 1≤ ≤(
 
-2079741*
+2099841*
 1≤ ≤(
 
-2075237*
+2095237*
 1≤ ≤(
 
-2075726*
+2095726*
 1≤ ≤(
 
-2075237*
+2095237*
 1≤ ≤(
 
-20710735*
+20910835*
 1≥ ≥(
 
-20710726*
+20910826*
 1≥	 ≥(
 
-2078126*
+2098226*
 1≥ ≥(
 
-20710736*
+20910836*
 1≥ ≥(4
 
-2075737*
+2095737*
 1≥ ≥(4
 
-20721141*
+20921341*
 1≥$ ≥(4
 
-2075237*
+2095237*
 1≥ ≥(#
 
-2075726*
+2095726*
 1≥ ≥(#
 
-2075237*
+2095237*
 1≥ ≥(#
 
-2075737*
+2095737*
 1¥	 ¥(
 
-20710141*
+20910241*
 1¥ ¥(
 
-2075237*
+2095237*
 1¥	 ¥(
 
-2075726*
+2095726*
 1¥	 ¥(
 
-2075237*
+2095237*
 1¥	 ¥(
 
-21317375*
+21517576*
 1π" π()
 
-21321775*
+21521976*
 1π6 π(>
 
-2138723*
+2158823*
 1∏ ∏(
 
-2138926*
+2159026*
 1∏ ∏(
 
-21317335*
+21517535*
 1π* π(4
 
-21317326*
+21517526*
 1π" π()
 
-21321735*
+21521935*
 1π? π(B
 
-21321726*
+21521926*
 1π6 π(>
 
-2135737*
+2155737*
 1∫ ∫(
 
-2139741*
+2159841*
 1∫ ∫(
 
-2135237*
+2155237*
 1∫ ∫(
 
-2135726*
+2155726*
 1∫ ∫(
 
-2135237*
+2155237*
 1∫ ∫(
 
-2135737*
+2155737*
 1ª ª(.
 
-21321941*
+21522141*
 1ª! ª(.
 
-2135237*
+2155237*
 1ª ª( 
 
-2135726*
+2155726*
 1ª ª( 
 
-2135237*
+2155237*
 1ª ª( 
 
-2135737*
+2155737*
 1º	 º(
 
-21310141*
+21510241*
 1º º(
 
-2135237*
+2155237*
 1º	 º(
 
-2135726*
+2155726*
 1º	 º(
 
-2135237*
+2155237*
 1º	 º(
 
-22117375*
+22317576*
 1¿0 ¿(7
 
-2214275*
+2234276*
 1¿D ¿(J
 
-2214275*
+2234276*
 1¿S ¿(Y
 
-2218723*
+2238823*
 1¿ ¿(
 
-2218926*
+2239026*
 1¿ ¿(
 
-22117335*
+22317535*
 1¿8 ¿(B
 
-22117326*
+22317526*
 1¿0 ¿(7
 
-2214235*
+2234235*
 1¿K ¿(Q
 
-2214226*
+2234226*
 1¿D ¿(J
 
-2214235*
+2234235*
 1¿Z ¿(d
 
-2214226*
+2234226*
 1¿S ¿(Y
 
-2215737*
+2235737*
 1¡	 ¡(
 
-2219741*
+2239841*
 1¡ ¡(
 
-2215237*
+2235237*
 1¡	 ¡(
 
-2215726*
+2235726*
 1¡	 ¡(
 
-2215237*
+2235237*
 1¡	 ¡(
 
-2215737*
+2235737*
 1¬ ¬(1
 
-22122541*
+22322741*
 1¬! ¬(1
 
-2215237*
+2235237*
 1¬ ¬( 
 
-2215726*
+2235726*
 1¬ ¬( 
 
-2215237*
+2235237*
 1¬ ¬( 
 
-2215737*
+2235737*
 1√	 √(
 
-22110141*
+22310241*
 1√ √(
 
-2215237*
+2235237*
 1√	 √(
 
-2215726*
+2235726*
 1√	 √(
 
-2215237*
+2235237*
 1√	 √(
 
-22710736*
+22910836*
 1∆ ∆(!
 
-2278723*
+2298823*
 1∆ ∆(
 
-2278926*
+2299026*
 1∆ ∆(
 
-22710726*
+22910826*
 1∆ ∆(
 
-2278126*
+2298226*
 1∆ ∆( 
 
-2275737*
+2295737*
 1«	 «(
 
-2279741*
+2299841*
 1« «(
 
-2275237*
+2295237*
 1«	 «(
 
-2275726*
+2295726*
 1«	 «(
 
-2275237*
+2295237*
 1«	 «(
 
-22710735*
+22910835*
 1» »(
 
-22710726*
+22910826*
 1»	 »(
 
-2278126*
+2298226*
 1» »(
 
-22710736*
+22910836*
 1» »(3
 
-2275737*
+2295737*
 1» »(3
 
-22723141*
+22923341*
 1»$ »(3
 
-2275237*
+2295237*
 1» »(#
 
-2275726*
+2295726*
 1» »(#
 
-2275237*
+2295237*
 1» »(#
 
-2275737*
+2295737*
 1…	 …(
 
-22710141*
+22910241*
 1… …(
 
-2275237*
+2295237*
 1…	 …(
 
-2275726*
+2295726*
 1…	 …(
 
-2275237*
+2295237*
 1…	 …(
 
-23317375*
+23517576*
 1Ã4 Ã(;
 
-2338723*
+2358823*
 1Ã Ã(
 
-2338926*
+2359026*
 1Ã Ã(
 
-23317335*
+23517535*
 1Ã< Ã(F
 
-23317326*
+23517526*
 1Ã4 Ã(;
 
-2335737*
+2355737*
 1Õ	 Õ(
 
-2339741*
+2359841*
 1Õ Õ(
 
-2335237*
+2355237*
 1Õ	 Õ(
 
-2335726*
+2355726*
 1Õ	 Õ(
 
-2335237*
+2355237*
 1Õ	 Õ(
 
-2335737*
+2355737*
 1Œ Œ(5
 
-23323741*
+23523941*
 1Œ! Œ(5
 
-2335237*
+2355237*
 1Œ Œ( 
 
-2335726*
+2355726*
 1Œ Œ( 
 
-2335237*
+2355237*
 1Œ Œ( 
 
-2335737*
+2355737*
 1œ	 œ(
 
-23310141*
+23510241*
 1œ œ(
 
-2335237*
+2355237*
 1œ	 œ(
 
-2335726*
+2355726*
 1œ	 œ(
 
-2335237*
+2355237*
 1œ	 œ(
 
-23924336*
+24124536*
 1‘ ‘(
 
-2394275*
+2414276*
 1‘ ‘( 
 
-2394275*
+2414276*
 1‘& ‘(,
 
-2398723*
+2418823*
 1” ”(
 
-2398926*
+2419026*
 1” ”(
 
-23924326*
+24124526*
 1‘ ‘(
 
-2394235*
+2414235*
 1‘! ‘($
 
-2394226*
+2414226*
 1‘ ‘( 
 
-2394235*
+2414235*
 1‘- ‘(1
 
-2394226*
+2414226*
 1‘& ‘(,
 
-2395737*
+2415737*
 1’	 ’(
 
-2399741*
+2419841*
 1’ ’(
 
-2395237*
+2415237*
 1’	 ’(
 
-2395726*
+2415726*
 1’	 ’(
 
-2395237*
+2415237*
 1’	 ’(
 
-23924335*
+24124535*
 1÷ ÷(
 
-23924326*
+24124526*
 1÷	 ÷(
 
-23924336*
+24124536*
 1÷ ÷($
 
-2395737*
+2415737*
 1÷ ÷($
 
-23924541*
+24124741*
 1÷ ÷($
 
-2395237*
+2415237*
 1÷ ÷(
 
-2395726*
+2415726*
 1÷ ÷(
 
-2395237*
+2415237*
 1÷ ÷(
 
-2395737*
+2415737*
 1◊	 ◊(
 
-23910141*
+24110241*
 1◊ ◊(
 
-2395237*
+2415237*
 1◊	 ◊(
 
-2395726*
+2415726*
 1◊	 ◊(
 
-2395237*
+2415237*
 1◊	 ◊(
 
-2474275*
+2494276*
 1‹  ‹(&
 
-24717375*
+24917576*
 1‹3 ‹(:
 
-2478723*
+2498823*
 1€ €(
 
-2478926*
+2499026*
 1€ €(
 
-2474235*
+2494235*
 1‹' ‹(1
 
-2474226*
+2494226*
 1‹  ‹(&
 
-24717335*
+24917535*
 1‹; ‹(E
 
-24717326*
+24917526*
 1‹3 ‹(:
 
-2475737*
+2495737*
 1›	 ›(
 
-2479741*
+2499841*
 1› ›(
 
-2475237*
+2495237*
 1›	 ›(
 
-2475726*
+2495726*
 1›	 ›(
 
-2475237*
+2495237*
 1›	 ›(
 
-2475737*
+2495737*
 1ﬁ ﬁ(*
 
-24725141*
+24925341*
 1ﬁ ﬁ(*
 
-2475237*
+2495237*
 1ﬁ ﬁ(
 
-2475726*
+2495726*
 1ﬁ ﬁ(
 
-2475237*
+2495237*
 1ﬁ ﬁ(
 
-2475737*
+2495737*
 1ﬂ	 ﬂ(
 
-24710141*
+24910241*
 1ﬂ ﬂ(
 
-2475237*
+2495237*
 1ﬂ	 ﬂ(
 
-2475726*
+2495726*
 1ﬂ	 ﬂ(
 
-2475237*
+2495237*
 1ﬂ	 ﬂ(
 
-2534275*
+2554276*
 1‰% ‰(+
 
-25317375*
+25517576*
 1‰8 ‰(?
 
-2538723*
+2558823*
 1„ „(
 
-2538926*
+2559026*
 1„ „(
 
-2534235*
+2554235*
 1‰, ‰(6
 
-2534226*
+2554226*
 1‰% ‰(+
 
-25317335*
+25517535*
 1‰@ ‰(J
 
-25317326*
+25517526*
 1‰8 ‰(?
 
-2535737*
+2555737*
 1Â	 Â(
 
-2539741*
+2559841*
 1Â Â(
 
-2535237*
+2555237*
 1Â	 Â(
 
-2535726*
+2555726*
 1Â	 Â(
 
-2535237*
+2555237*
 1Â	 Â(
 
-2535737*
+2555737*
 1Ê Ê(/
 
-25325741*
+25525941*
 1Ê Ê(/
 
-2535237*
+2555237*
 1Ê Ê(
 
-2535726*
+2555726*
 1Ê Ê(
 
-2535237*
+2555237*
 1Ê Ê(
 
-2535737*
+2555737*
 1Á	 Á(
 
-25310141*
+25510241*
 1Á Á(
 
-2535237*
+2555237*
 1Á	 Á(
 
-2535726*
+2555726*
 1Á	 Á(
 
-2535237*
+2555237*
 1Á	 Á(
 
-25910736*
+26110836*
 1Ï Ï(
 
-2594275*
+2614276*
 1Ï! Ï('
 
-2598723*
+2618823*
 1Î Î(
 
-2598926*
+2619026*
 1Î Î(
 
-25910726*
+26110826*
 1Ï Ï(
 
-2598126*
+2618226*
 1Ï Ï(
 
-2594235*
+2614235*
 1Ï( Ï(2
 
-2594226*
+2614226*
 1Ï! Ï('
 
-2595737*
+2615737*
 1Ì	 Ì(
 
-2599741*
+2619841*
 1Ì Ì(
 
-2595237*
+2615237*
 1Ì	 Ì(
 
-2595726*
+2615726*
 1Ì	 Ì(
 
-2595237*
+2615237*
 1Ì	 Ì(
 
-25910735*
+26110835*
 1Ó Ó(
 
-25910726*
+26110826*
 1Ó	 Ó(
 
-2598126*
+2618226*
 1Ó Ó(
 
-25910736*
+26110836*
 1Ó Ó(+
 
-2595737*
+2615737*
 1Ó Ó(+
 
-25926341*
+26126541*
 1Ó" Ó(+
 
-2595237*
+2615237*
 1Ó Ó(!
 
-2595726*
+2615726*
 1Ó Ó(!
 
-2595237*
+2615237*
 1Ó Ó(!
 
-2595737*
+2615737*
 1Ô	 Ô(
 
-25910141*
+26110241*
 1Ô Ô(
 
-2595237*
+2615237*
 1Ô	 Ô(
 
-2595726*
+2615726*
 1Ô	 Ô(
 
-2595237*
+2615237*
 1Ô	 Ô(
 
-2654275*
+2674276*
 1Ù Ù($
 
-2658723*
+2678823*
 1Û Û(
 
-2658926*
+2679026*
 1Û Û(
 
-2654235*
+2674235*
 1Ù% Ù(/
 
-2654226*
+2674226*
 1Ù Ù($
 
-2655737*
+2675737*
 1ı	 ı(
 
-2659741*
+2679841*
 1ı ı(
 
-2655237*
+2675237*
 1ı	 ı(
 
-2655726*
+2675726*
 1ı	 ı(
 
-2655237*
+2675237*
 1ı	 ı(
 
-2655737*
+2675737*
 1ˆ ˆ((
 
-26526941*
+26727141*
 1ˆ ˆ((
 
-2655237*
+2675237*
 1ˆ ˆ(
 
-2655726*
+2675726*
 1ˆ ˆ(
 
-2655237*
+2675237*
 1ˆ ˆ(
 
-2655737*
+2675737*
 1˜	 ˜(
 
-26510141*
+26710241*
 1˜ ˜(
 
-2655237*
+2675237*
 1˜	 ˜(
 
-2655726*
+2675726*
 1˜	 ˜(
 
-2655237*
+2675237*
 1˜	 ˜(
 
-2714275*
+2734276*
 1˚" ˚((
 
-2714275*
+2734276*
 1˚5 ˚(;
 
-2714275*
+2734276*
 1˚C ˚(I
 
-2718723*
+2738823*
 1˙ ˙(
 
-2718926*
+2739026*
 1˙ ˙(
 
-2714235*
+2734235*
 1˚) ˚(3
 
-2714226*
+2734226*
 1˚" ˚((
 
-2714235*
+2734235*
 1˚< ˚(A
 
-2714226*
+2734226*
 1˚5 ˚(;
 
-2714235*
+2734235*
 1˚J ˚(U
 
-2714226*
+2734226*
 1˚C ˚(I
 
-2715737*
+2735737*
 1¸	 ¸(
 
-2719741*
+2739841*
 1¸ ¸(
 
-2715237*
+2735237*
 1¸	 ¸(
 
-2715726*
+2735726*
 1¸	 ¸(
 
-2715237*
+2735237*
 1¸	 ¸(
 
-2715737*
+2735737*
 1˝ ˝(2
 
-27127541*
+27327741*
 1˝% ˝(2
 
-2715237*
+2735237*
 1˝ ˝($
 
-2715726*
+2735726*
 1˝ ˝($
 
-2715237*
+2735237*
 1˝ ˝($
 
-2715737*
+2735737*
 1˛	 ˛(
 
-27110141*
+27310241*
 1˛ ˛(
 
-2715237*
+2735237*
 1˛	 ˛(
 
-2715726*
+2735726*
 1˛	 ˛(
 
-2715237*
+2735237*
 1˛	 ˛(
 
-27710736*
+27910836*
 1É É(
 
-2778723*
+2798823*
 1Ç Ç(
 
-2778926*
+2799026*
 1Ç Ç(
 
-27710726*
+27910826*
 1É É(
 
-27728126*
+27928326*
 1É É(
 
-2775737*
+2795737*
 1Ñ	 Ñ(
 
-2779741*
+2799841*
 1Ñ Ñ(
 
-2775237*
+2795237*
 1Ñ	 Ñ(
 
-2775726*
+2795726*
 1Ñ	 Ñ(
 
-2775237*
+2795237*
 1Ñ	 Ñ(
 
-27710735*
+27910835*
 1Ö Ö(
 
-27710726*
+27910826*
 1Ö	 Ö(
 
-27728126*
+27928326*
 1Ö Ö(
 
-27710736*
+27910836*
 1Ö Ö(8
 
-2775737*
+2795737*
 1Ö Ö(8
 
-27728341*
+27928541*
 1Ö) Ö(8
 
-2775237*
+2795237*
 1Ö Ö((
 
-2775726*
+2795726*
 1Ö Ö((
 
-2775237*
+2795237*
 1Ö Ö((
 
-2775737*
+2795737*
 1Ü	 Ü(
 
-27710141*
+27910241*
 1Ü Ü(
 
-2775237*
+2795237*
 1Ü	 Ü(
 
-2775726*
+2795726*
 1Ü	 Ü(
 
-2775237*
+2795237*
 1Ü	 Ü(
 
-28517375*
+28717576*
 1ã! ã((
 
-2854275*
+2874276*
 1ã4 ã(:
 
-2854275*
+2874276*
 1ãU ã([
 
-2858723*
+2878823*
 1ä ä(
 
-2858926*
+2879026*
 1ä ä(
 
-28517335*
+28717535*
 1ã) ã(2
 
-28517326*
+28717526*
 1ã! ã((
 
-2854235*
+2874235*
 1ã; ã(F
 
-2854226*
+2874226*
 1ã4 ã(:
 
-2854235*
+2874235*
 1ã\ ã(c
 
-2854226*
+2874226*
 1ãU ã([
 
-2855737*
+2875737*
 1å	 å(
 
-2859741*
+2879841*
 1å å(
 
-2855237*
+2875237*
 1å	 å(
 
-2855726*
+2875726*
 1å	 å(
 
-2855237*
+2875237*
 1å	 å(
 
-2855737*
+2875737*
 1ç ç(1
 
-28528941*
+28729141*
 1ç% ç(1
 
-2855237*
+2875237*
 1ç ç($
 
-2855726*
+2875726*
 1ç ç($
 
-2855237*
+2875237*
 1ç ç($
 
-2855737*
+2875737*
 1é	 é(
 
-28510141*
+28710241*
 1é é(
 
-2855237*
+2875237*
 1é	 é(
 
-2855726*
+2875726*
 1é	 é(
 
-2855237*
+2875237*
 1é	 é(
 
-29117375*
+29317576*
 1ì$ ì(+
 
-29117375*
+29317576*
 1ì7 ì(>
 
-2918723*
+2938823*
 1í í(
 
-2918926*
+2939026*
 1í í(
 
-29117335*
+29317535*
 1ì, ì(5
 
-29117326*
+29317526*
 1ì$ ì(+
 
-29117335*
+29317535*
 1ì? ì(J
 
-29117326*
+29317526*
 1ì7 ì(>
 
-2915737*
+2935737*
 1î	 î(
 
-2919741*
+2939841*
 1î î(
 
-2915237*
+2935237*
 1î	 î(
 
-2915726*
+2935726*
 1î	 î(
 
-2915237*
+2935237*
 1î	 î(
 
-2915737*
+2935737*
 1ï ï(4
 
-29129541*
+29329741*
 1ï% ï(4
 
-2915237*
+2935237*
 1ï ï($
 
-2915726*
+2935726*
 1ï ï($
 
-2915237*
+2935237*
 1ï ï($
 
-2915737*
+2935737*
 1ñ	 ñ(
 
-29110141*
+29310241*
 1ñ ñ(
 
-2915237*
+2935237*
 1ñ	 ñ(
 
-2915726*
+2935726*
 1ñ	 ñ(
 
-2915237*
+2935237*
 1ñ	 ñ(
 
-29717375*
+29917576*
 1ö# ö(*
 
-2978723*
+2998823*
 1ô ô(
 
-2978926*
+2999026*
 1ô ô(
 
-29717335*
+29917535*
 1ö+ ö(5
 
-29717326*
+29917526*
 1ö# ö(*
 
-2975737*
+2995737*
 1õ	 õ(
 
-2979741*
+2999841*
 1õ õ(
 
-2975237*
+2995237*
 1õ	 õ(
 
-2975726*
+2995726*
 1õ	 õ(
 
-2975237*
+2995237*
 1õ	 õ(
 
-2975737*
+2995737*
 1ú ú(.
 
-29730141*
+29930341*
 1ú  ú(.
 
-2975237*
+2995237*
 1ú ú(
 
-2975726*
+2995726*
 1ú ú(
 
-2975237*
+2995237*
 1ú ú(
 
-2975737*
+2995737*
 1ù	 ù(
 
-29710141*
+29910241*
 1ù ù(
 
-2975237*
+2995237*
 1ù	 ù(
 
-2975726*
+2995726*
 1ù	 ù(
 
-2975237*
+2995237*
 1ù	 ù(

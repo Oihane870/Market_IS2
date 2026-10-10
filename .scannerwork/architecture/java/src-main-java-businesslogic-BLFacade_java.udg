@@ -1,5 +1,5 @@
 
-1.0oihane870_marketis2JavaFrontend"1789814226958*java2.B‚#
+1.0oihane870_marketis2JavaFrontend"1791645167107*java2.B‡#
 .
 )src/main/java/businesslogic/BLFacade.java2
 	
@@ -73,10 +73,10 @@ createSale31
 is type46
 )
 #exceptions.FileNotUploadedException48
-.
-(exceptions.MustBeLaterThanTodayException50
-*
-$exceptions.SaleAlreadyExistException52
+#
+MustBeLaterThanTodayException50
+
+SaleAlreadyExistException52
 I
 Cbusinesslogic.BLFacade#getSales(Ljava/lang/String;)Ljava/util/List;54
 
@@ -166,14 +166,14 @@ reportSale108
 (79:2)-(79:50)111
 
 getReportedSales112
-S
-Lbusinesslogic.BLFacade#resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)Z114
+L
+Ebusinesslogic.BLFacade#resolveReport(Ljava/lang/Integer;LSalaketa;Z)Z114
 
 (80:2)-(80:92)115
 
 resolveReport116
-
-domain.Salaketa118
+'
+ Recovered#typeBindingLSalaketa;0118
 h
 abusinesslogic.BLFacade#addErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Z120
 
@@ -236,8 +236,8 @@ d
 (91:5)-(91:55)159
 
 getOpenEskaerak160
-
-domain.Eskaera162
+&
+Recovered#typeBindingLEskaera;0162
 e
 ^businesslogic.BLFacade#addEskaintza(Ljava/lang/Integer;Ljava/lang/String;FLjava/lang/String;)Z164
 
@@ -321,9 +321,6 @@ R
 
 44
 444519
-
-49
-495019
 R
 127K
 12712829 *
@@ -341,6 +338,9 @@ R
 
 135
 13513619
+
+161
+16116219
 R
 157K
 15715829 *
@@ -392,9 +392,6 @@ R
 
 42
 424319
-
-161
-16116219
 M
 63G
 636429 *
@@ -487,29 +484,12 @@ M
 
 15
 70
-R
-113K
-11311429 *
-1P P()28:5B&
-
-
-11
-12
-
-13
-115
-
-15
-116
 
 47
 474819
 
 35
 353619
-
-51
-515219
 R
 109K
 10911029 *
@@ -590,9 +570,6 @@ R
 
 71
 717219
-
-117
-11711819
 R
 123K
 12312429 *
@@ -642,8 +619,28 @@ R
 15
 108
 
+51
+515219
+
 57
 575819
+R
+113K
+11311429 *
+1P P()28:5B&
+
+
+11
+12
+
+13
+115
+
+15
+116
+
+117
+11711819
 N
 97H
 979829 *
@@ -673,6 +670,9 @@ R
 
 15
 140
+
+49
+495019
 M
 27G
 272829 *
