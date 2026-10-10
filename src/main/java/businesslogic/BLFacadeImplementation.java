@@ -31,7 +31,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	private static final Logger LOGGER = Logger.getLogger(BLFacadeImplementation.class.getName());
 	 
 
-		private static final String basePath="src/main/resources/images/";
+		private static final String BASE_PATH="src/main/resources/images/";
 		protected transient DataAccess dbManager;
 
 	public BLFacadeImplementation()  {		
