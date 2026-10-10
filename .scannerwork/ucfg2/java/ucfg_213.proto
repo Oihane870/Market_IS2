@@ -1,27 +1,0 @@
-
-__sonar_lambda_12$gui.AdminGUI)
-src\main\java\gui\AdminGUI.java)  (0"1* 
-1   (KI
-   (!
-%34gui.AdminErreklamazioakGUI"gui.AdminErreklamazioakGUIz
-x
-   (
-%35"$gui.AdminErreklamazioakGUI#<init>()V*?
-
-__unknown_file (#
-!
-%34gui.AdminErreklamazioakGUI¬©
-   (0
-%36void"java.awt.Window#setVisible(Z)V*?
-
-__unknown_file (#
-!
-%34gui.AdminErreklamazioakGUI* 
-
-__unknown_file (22setVisible(Z)"
-   (0
-
-%36void:+
-) (*
-ejava.awt.event.ActionEventB
-gui.AdminGUI
