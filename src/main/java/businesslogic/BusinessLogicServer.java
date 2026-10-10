@@ -79,7 +79,9 @@ public class BusinessLogicServer extends JDialog {
 				okButton.setActionCommand("Close");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
+			}
 			buttonPane.add(createCancelButton());
+		}
 		
 		ConfigXML c=ConfigXML.getInstance();
 
@@ -110,12 +112,13 @@ public class BusinessLogicServer extends JDialog {
 			
 			textArea.append("Running service at:\n\t" + service);
 			textArea.append("\n\n\nPress button to exit this server... ");
-			
-		   private JButton createCancelButton() { J
-			   Button cancelButton = new JButton("Cancel"); cancelButton.setActionCommand("Cancel"); return cancelButton; 
-			}
+		}
+	}
 
-	  }
+	private JButton createCancelButton() {
+		JButton cancelButton = new JButton("Cancel");
+		cancelButton.setActionCommand("Cancel");
+		return cancelButton;
 	}
 }
 

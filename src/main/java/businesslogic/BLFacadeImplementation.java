@@ -104,7 +104,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	 * {@inheritDoc}
 	 */
     @WebMethod public Image downloadImage(String imageName) {
-        File image = new File(basePath+imageName);
+        File image = new File(BASE_PATH+imageName);
         try {
             return ImageIO.read(image);
         } catch (IOException e) {
