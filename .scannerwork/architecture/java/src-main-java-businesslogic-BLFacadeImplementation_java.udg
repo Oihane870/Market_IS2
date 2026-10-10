@@ -1,5 +1,5 @@
 
-1.0oihane870_marketis2JavaFrontend"1791645167443*java2.BªG
+1.0oihane870_marketis2JavaFrontend"1791647286390*java2.B¬G
 <
 7src/main/java/businesslogic/BLFacadeImplementation.java2
 	
@@ -136,10 +136,10 @@ createSale81
 !Recovered#typeBindingLWebMethod;091
 )
 #exceptions.FileNotUploadedException93
-#
-MustBeLaterThanTodayException95
-
-SaleAlreadyExistException97
+.
+(exceptions.MustBeLaterThanTodayException95
+*
+$exceptions.SaleAlreadyExistException97
 #
 dataAccess.DataAccess#open()V99
 
@@ -293,16 +293,16 @@ Gbusinesslogic.BLFacadeImplementation#getReportedSales()Ljava/util/List;210
 getReportedSales212
 ?
 8dataAccess.DataAccess#getReportedSales()Ljava/util/List;214
-Z
-Sbusinesslogic.BLFacadeImplementation#resolveReport(Ljava/lang/Integer;LSalaketa;Z)Z216
+a
+Zbusinesslogic.BLFacadeImplementation#resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)Z216
 
 (184:5)-(190:6)217
 
 resolveReport218
-'
- Recovered#typeBindingLSalaketa;0220
-K
-DdataAccess.DataAccess#resolveReport(Ljava/lang/Integer;LSalaketa;Z)Z222
+
+domain.Salaketa220
+R
+KdataAccess.DataAccess#resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)Z222
 v
 obusinesslogic.BLFacadeImplementation#addErreklamazioa(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Z224
 
@@ -383,8 +383,8 @@ Fbusinesslogic.BLFacadeImplementation#getOpenEskaerak()Ljava/util/List;280
 (258:5)-(264:6)281
 
 getOpenEskaerak282
-&
-Recovered#typeBindingLEskaera;0284
+
+domain.Eskaera284
 >
 7dataAccess.DataAccess#getOpenEskaerak()Ljava/util/List;286
 s
@@ -448,14 +448,25 @@ T
 124
 12412540
 
-221
-22122240
-
 195
 19519640
 
 297
 29729840
+T
+215M
+21521640 *
+1¹ ¹(!28:5B&
+
+
+11
+12
+
+13
+217
+
+15
+218
 
 134
 13413540
@@ -465,6 +476,9 @@ T
 
 253
 25325440
+
+283
+28328419
 
 46
 464740
@@ -561,9 +575,6 @@ T
 
 15
 206
-
-96
-969719
 
 265
 26526640
@@ -768,6 +779,9 @@ R
 
 189
 18919040
+
+96
+969719
 
 259
 25926040
@@ -880,20 +894,6 @@ M
 
 84
 848519
-T
-215M
-21521640 *
-1¹ ¹(!28:5B&
-
-
-11
-12
-
-13
-217
-
-15
-218
 M
 78G
 787940 *
@@ -949,6 +949,9 @@ U
 
 65
 656640
+
+219
+21922019
 
 33
 333419
@@ -989,9 +992,6 @@ T
 
 291
 29129240
-
-94
-949519
 R
 157K
 15715840 *
@@ -1057,17 +1057,20 @@ M
 15
 51
 
+221
+22122240
+
 277
 27727840
 
 90
 909119
+
+94
+949519
 
 245
 24524619
-
-283
-28328419
 T
 185M
 18518640 *
@@ -1127,9 +1130,6 @@ T
 
 15
 270
-
-219
-21922019
 
 161
 16116219

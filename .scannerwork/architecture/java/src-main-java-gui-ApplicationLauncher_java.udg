@@ -1,5 +1,5 @@
 
-1.0oihane870_marketis2JavaFrontend"1791645165141*java2.BÁ
+1.0oihane870_marketis2JavaFrontend"1791647284532*java2.BÏ
 /
 *src/main/java/gui/ApplicationLauncher.java2
 	
@@ -72,82 +72,94 @@ Pjava.util.logging.Logger#getLogger(Ljava/lang/String;)Ljava/util/logging/Logger
 main43
 
 	has param44
-'
-!Recovered#typeBindingLConfigXML;046
+
+configuration.ConfigXML46
+D
+>configuration.ConfigXML#getInstance()Lconfiguration/ConfigXML;48
 
-java.util.Locale48
+java.util.Locale50
 6
-0java.util.Locale#setDefault(Ljava/util/Locale;)V50
+0java.util.Locale#setDefault(Ljava/util/Locale;)V52
+;
+5configuration.ConfigXML#getLocale()Ljava/lang/String;54
 
-gui.MainGUI52
+gui.MainGUI56
 
-ARG_053
+ARG_057
 
-seller3@gmail.com54
+seller3@gmail.com58
 
-java.awt.Window56
+java.awt.Window60
 $
-java.awt.Window#setVisible(Z)V58
+java.awt.Window#setVisible(Z)V62
 
 
-true59
+true63
 
-businesslogic.BLFacade61
+businesslogic.BLFacade65
 
-javax.swing.UIManager63
+javax.swing.UIManager67
 ?
-9javax.swing.UIManager#setLookAndFeel(Ljava/lang/String;)V65
+9javax.swing.UIManager#setLookAndFeel(Ljava/lang/String;)V69
 -
-'javax.swing.plaf.metal.MetalLookAndFeel66
-
-dataAccess.DataAccess68
-*
-$businesslogic.BLFacadeImplementation70
-
-java.net.URL72
-
-javax.xml.namespace.QName74
-
-http://businessLogic/75
-
-ARG_176
-#
-BLFacadeImplementationService77
-%
-Recovered#typeBindingLService;079
->
-8gui.MainGUI#setBussinessLogic(Lbusinesslogic/BLFacade;)V81
-
-java.lang.Exception83
-
-javax.swing.JLabel85
+'javax.swing.plaf.metal.MetalLookAndFeel70
 5
-/javax.swing.JLabel#setText(Ljava/lang/String;)V87
-
-
-Error: ï¿¿88
-$
-gui.MainGUI.jLabelSelectOption90
-
-java.lang.Throwable92
-6
-0java.lang.Throwable#toString()Ljava/lang/String;94
-
-javax.swing.JComponent96
-=
-7javax.swing.JComponent#setForeground(Ljava/awt/Color;)V98
-
-java.awt.Color100
-
-java.awt.Color.RED102
-f
-_java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V104
+/configuration.ConfigXML#isBusinessLogicLocal()Z72
+
+dataAccess.DataAccess74
+*
+$businesslogic.BLFacadeImplementation76
+F
+@configuration.ConfigXML#getBusinessLogicNode()Ljava/lang/String;78
+F
+@configuration.ConfigXML#getBusinessLogicPort()Ljava/lang/String;80
+F
+@configuration.ConfigXML#getBusinessLogicName()Ljava/lang/String;82
+
+java.net.URL84
+
+javax.xml.namespace.QName86
+
+http://businessLogic/87
+
+ARG_188
 #
-Error in ApplicationLauncher105
-
-java.util.logging.Level107
+BLFacadeImplementationService89
 %
-java.util.logging.Level.SEVERE109J
+Recovered#typeBindingLService;091
+>
+8gui.MainGUI#setBussinessLogic(Lbusinesslogic/BLFacade;)V93
+
+java.lang.Exception95
+
+javax.swing.JLabel97
+5
+/javax.swing.JLabel#setText(Ljava/lang/String;)V99
+
+
+Error: ï¿¿100
+%
+gui.MainGUI.jLabelSelectOption102
+
+java.lang.Throwable104
+7
+0java.lang.Throwable#toString()Ljava/lang/String;106
+
+javax.swing.JComponent108
+>
+7javax.swing.JComponent#setForeground(Ljava/awt/Color;)V110
+
+java.awt.Color112
+
+java.awt.Color.RED114
+f
+_java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V116
+#
+Error in ApplicationLauncher117
+
+java.util.logging.Level119
+%
+java.util.logging.Level.SEVERE121J
 
 1
 12
@@ -157,13 +169,13 @@ _java.util.logging.Logger#log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/l
 4 Z
 
 5
-5768jˆ
-
-91
-919225
-
-99
-9910025
+5768j‘
+
+103
+10310425
+
+111
+11111225
 M
 17G
 171819 *
@@ -184,20 +196,23 @@ M
 30
 303132
 
-62
-626325
+66
+666725
 
-80
-808132
+92
+929332
 
-45
-454625
+53
+535432
 
-71
-717210
+77
+777832
 
-93
-939432
+83
+838410
+
+105
+10510632
 M
 40G
 404132 *
@@ -215,80 +230,95 @@ M
 15
 43
 
-106
-10610725
+118
+11811925
 
-108
-10810925
+120
+12012125
 
 38
 383932
 
-47
-474810
+71
+717232
 
-97
-979832
+49
+495010
 
-103
-10310432
+109
+10911032
+
+47
+474832
+
+115
+11511632
 
 34
 343525
 
-57
-575832
+61
+616232
 
-60
-606125
+64
+646525
+
+107
+10710825
 
-95
-959625
-
-69
-697010
-
-49
-495032
-
-55
-555625
-
-78
-787925
-
-89
-899025
-
-23
-232425
-
-82
-828325
+75
+757610
 
 51
-515210
+515232
 
-86
-868732
+59
+596025
+
+90
+909125
 
 101
 10110225
 
-84
-848525
+23
+232425
+
+94
+949525
+
+79
+798032
+
+55
+555610
+
+98
+989932
+
+113
+11311425
+
+96
+969725
+
+81
+818232
 
 36
 363725
 
-64
-646532
+45
+454625
 
-67
-676810
+68
+686932
 
 73
 737410
+
+85
+858610
 G
 8B
 8910 *
@@ -304,7 +334,7 @@ G
 
 
 15
-16rý
+16rì
 
 172326*
 1 (
@@ -354,72 +384,100 @@ G
 404527*
 1 (
 
-404729*
+404528*
+1 ($
+
+404529*
+1 ($
+
+404733*
+1 ($
+
+404527*
+1 (
+
+404929*
 1 (
 
-404933*
+405133*
 1
  (
 
-404727*
+404927*
 1 (	
 
-404733*
+404933*
 1 (
 
-405126*
+403428*
+1  (+
+
+404529*
+1  (+
+
+405333*
+1" (+
+
+405526*
 1 (
 
-405127*
+405527*
 1 (
 
 '
-405133*
+405533*
 1 (2
 
 
-53
-54
+57
+58
 
-405529*
+405929*
 1 (
 '
-405733*
+406133*
 1 (2
 
 
-53
-59
+57
+63
 
-406026*
+406426*
 1   (
 
-406027*
+406427*
 1   (
 
-406229*
+406629*
 1! !(
 '
-406433*
+406833*
 1! !(2
 
 
-53
-66
+57
+70
 
-406227*
+406627*
 1! !(
 
-406726*
+404529*
+1# #(
+
+407133*
+1#
+ #(
+
+407326*
 1$ $(
 
-406727*
+407327*
 1$ $(
 
-406733*
+407333*
 1$ $("
 
-406933*
+407533*
 1% %(2
 
 403426*
@@ -428,111 +486,137 @@ G
 403427*
 1) )(
 
-407126*
+403428*
+1)$ )(:
+
+404529*
+1)$ )(:
+
+407733*
+1)& )(:
+
+403428*
+1)C )(Y
+
+404529*
+1)C )(Y
+
+407933*
+1)E )(Y
+
+403428*
+1)c )(y
+
+404529*
+1)c )(y
+
+408133*
+1)e )(y
+
+408326*
 1*
  *(
 
-407127*
+408327*
 1* *(	
 
-407133*
+408333*
 1* *(
 
-407326*
+408526*
 1/ /(
 
-407327*
+408527*
 1/ /(
 3
-407333*
+408533*
 1/ /("2
 
 
-53
-75
+57
+87
 
 
-76
-77
+88
+89
 
-407826*
+409026*
 11 1(
 
-407827*
+409027*
 11 1(
 
-406027*
+406427*
 130 3(8
 
-405129*
+405529*
 16 6(
 
-408033*
+409233*
 16 6(
 
-405127*
+405527*
 16 6(
 
-408226*
+409426*
 18 8(
 
-408227*
+409427*
 18 8(
 
-408429*
+409629*
 19 9( 
-'
-408633*
-19 9( 2
-
-
-53
-88
+(
+409833*
+19 9( 2
+
+57
+100
 
-408427*
+409627*
 19 9(
-
-408929*
+
+4010129*
 19 9(
 
 403428*
 19+ 9(5
-
-409129*
+
+4010329*
 19+ 9(5
-
-409333*
+
+4010533*
 19- 9(5
-
-409529*
+
+4010729*
 1: :(&
-
-409733*
+
+4010933*
 1: :(&
 
-408427*
+409627*
 1: :(
-
-408929*
-1: :(
-
-409927*
-1:' :(,
-
-409927*
-1:- :(0
 
 4010129*
+1: :(
+
+4011127*
+1:' :(,
+
+4011127*
+1:- :(0
+
+4011329*
 1:- :(0
 
 402329*
 1< <(
 )
-4010333*
+4011533*
 1< <(2
 
-76
-105
+88
+117
 
 401729*
 1< <(
@@ -546,11 +630,11 @@ G
 1< <(
 
 
-4010627*
+4011827*
 1< <(
 
-4010627*
+4011827*
 1< <(
 
-4010829*
+4012029*
 1< <(

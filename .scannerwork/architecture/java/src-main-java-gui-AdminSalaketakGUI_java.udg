@@ -1,5 +1,5 @@
 
-1.0oihane870_marketis2JavaFrontend"1791645168886*java2.Bô$
+1.0oihane870_marketis2JavaFrontend"1791647287215*java2.B€&
 -
 (src/main/java/gui/AdminSalaketakGUI.java2
 	
@@ -264,8 +264,8 @@ Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V
 domain.Sale177
 @
 9businesslogic.BLFacade#getReportedSales()Ljava/util/List;179
-'
- Recovered#typeBindingLSalaketa;0181
+
+domain.Salaketa181
 
 java.util.ArrayList183
 6
@@ -278,34 +278,40 @@ Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V
 )java.util.Vector#add(Ljava/lang/Object;)Z191
 /
 (domain.Sale#getTitle()Ljava/lang/String;193
+4
+-domain.Salaketa#getReason()Ljava/lang/String;195
+7
+0domain.Salaketa#getUserEmail()Ljava/lang/String;197
+%
+domain.Salaketa#isTratatuta()Z199
 
-	Tratatuta194
+	Tratatuta200
 
-Tratatu gabe195
+Tratatu gabe201
 F
-?javax.swing.table.DefaultTableModel#addRow(Ljava/util/Vector;)V197
+?javax.swing.table.DefaultTableModel#addRow(Ljava/util/Vector;)V203
 
-(92:2)-(111:3)198
+(92:2)-(111:3)204
 
-eliminar199
+eliminar205
 +
-$javax.swing.JTable#getSelectedRow()I201
+$javax.swing.JTable#getSelectedRow()I207
 K
-Djavax.swing.table.DefaultTableModel#getValueAt(II)Ljava/lang/Object;203
+Djavax.swing.table.DefaultTableModel#getValueAt(II)Ljava/lang/Object;209
 
-javax.swing.JOptionPane205
+javax.swing.JOptionPane211
 Y
-Rjavax.swing.JOptionPane#showMessageDialog(Ljava/awt/Component;Ljava/lang/Object;)V207
+Rjavax.swing.JOptionPane#showMessageDialog(Ljava/awt/Component;Ljava/lang/Object;)V213
 '
- Salaketa hau jada tratatuta dago208
-L
-Ebusinesslogic.BLFacade#resolveReport(Ljava/lang/Integer;LSalaketa;Z)Z210
+ Salaketa hau jada tratatuta dago214
+S
+Lbusinesslogic.BLFacade#resolveReport(Ljava/lang/Integer;Ldomain/Salaketa;Z)Z216
 
-java.lang.Integer212
+java.lang.Integer218
 5
-.domain.Sale#getSaleNumber()Ljava/lang/Integer;214
+.domain.Sale#getSaleNumber()Ljava/lang/Integer;220
 
-Salaketa eguneratua215J
+Salaketa eguneratua221J
 
 1
 12
@@ -315,7 +321,7 @@ Ebusinesslogic.BLFacade#resolveReport(Ljava/lang/Integer;LSalaketa;Z)Z210
 4 Z
 
 5
-5768jô
+5768j¹
 
 113
 11311470
@@ -339,8 +345,8 @@ M
 15
 84
 
-211
-21121227
+217
+21721827
 M
 36G
 363732 *
@@ -364,11 +370,11 @@ M
 186
 18618710
 
-200
-20020170
+206
+20620770
 
-202
-20220370
+208
+20820970
 
 25
 252627
@@ -400,6 +406,9 @@ M
 
 48
 484910
+
+180
+18018127
 M
 50G
 505132 *
@@ -431,6 +440,9 @@ M
 
 168
 16816927
+
+194
+19419570
 
 117
 11711870
@@ -536,14 +548,17 @@ R
 152
 15215370
 
-196
-19619770
+202
+20220370
 
 65
 656627
 
 130
 13013170
+
+215
+21521670
 
 73
 737470
@@ -581,11 +596,17 @@ R
 98
 989927
 
-213
-21321470
+196
+19619770
 
-204
-20420527
+198
+19819970
+
+219
+21922070
+
+210
+21021127
 
 154
 15415527
@@ -621,19 +642,13 @@ R
 33
 
 13
-198
+204
 
 15
-199
+205
 
 144
 14414570
-
-180
-18018127
-
-209
-20921070
 
 142
 14214370
@@ -653,8 +668,8 @@ R
 188
 18818927
 
-206
-20620770
+212
+21221370
 M
 44G
 444532 *
@@ -670,7 +685,7 @@ M
 
 
 15
-47r¾K
+47rÞM
 
 82528*
 1( (.
@@ -1609,12 +1624,36 @@ S
 
 16219043*
 1N	 N(
+
+1626264*
+1N N(
+
+16218067*
+1N N(
+
+16219443*
+1N N(
 
 16218667*
 1O O(
 
 16219043*
 1O	 O(
+
+1626264*
+1O O(
+
+16218067*
+1O O(
+
+16219643*
+1O O(
+
+16218067*
+1P	 P(
+
+16219843*
+1P P(
 
 16218667*
 1Q	 Q(
@@ -1623,7 +1662,7 @@ S
 1Q Q(2
 
 71
-194
+200
 
 16218667*
 1S	 S(
@@ -1632,7 +1671,7 @@ S
 1S S(2
 
 71
-195
+201
 
 16218667*
 1U U(
@@ -1649,7 +1688,7 @@ S
 1624867*
 1W W(
 
-16219643*
+16220243*
 1W W(
 
 1624467*
@@ -1664,7 +1703,7 @@ S
 1564067*
 1] ]()
 
-15620043*
+15620643*
 1] ]()
 
 1563667*
@@ -1691,7 +1730,7 @@ S
 1564867*
 1` `(3
 +
-15620243*
+15620843*
 1`) `(32
 
 105
@@ -1721,7 +1760,7 @@ S
 1564867*
 1a a(:
 +
-15620243*
+15620843*
 1a0 a(:2
 
 105
@@ -1736,16 +1775,22 @@ S
 1564467*
 1a a(/
 
-15620467*
+15618067*
+1b b(
+
+15619843*
+1b b(
+
+15621067*
 1c c($
 +
-15620643*
+15621243*
 1c c($2
 
 105
-208
+214
 
-15620429*
+15621029*
 1c c(
 
 156829*
@@ -1775,28 +1820,28 @@ S
 15616667*
 1i i(+
 
-15620943*
+15621543*
 1i i(+
 
-15621164*
+15621764*
 1i, i(>
 
 15617667*
 1i, i(>
 
-15621343*
+15621943*
 1i1 i(>
 
-15620467*
+15621067*
 1l l("
 +
-15620643*
+15621243*
 1l l("2
 
 105
-215
+221
 
-15620429*
+15621029*
 1l l(
 
 156829*
