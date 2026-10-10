@@ -17,20 +17,20 @@ public class AdminErreklamazioakGUI extends JFrame {
 	private JTable tableProducts = new JTable();
 	private DefaultTableModel tableModelProducts;
 	private JScrollPane scrollPanelProducts = new JScrollPane();
-	
+	private static final String ETIQUETAS = "Etiquetas";
 	private JButton btnOnartu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AdminErreklamazioakGUI.Onartu"));
 	private JButton btnEzeztatu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AdminErreklamazioakGUI.Ezeztatu"));
 
 	private String[] columnNamesProducts = new String[] {
-		    ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ProduktuIzena"),
-		    ResourceBundle.getBundle("Etiquetas").getString("Reason"),
-		    ResourceBundle.getBundle("Etiquetas").getString("AdminErreklamazioakGUI.Comprador"),
-		    ResourceBundle.getBundle("Etiquetas").getString("Egoera"),
+		    ResourceBundle.getBundle(ETIQUETAS).getString("NireErosketakGUI.ProduktuIzena"),
+		    ResourceBundle.getBundle(ETIQUETAS).getString("Reason"),
+		    ResourceBundle.getBundle(ETIQUETAS).getString("AdminErreklamazioakGUI.Comprador"),
+		    ResourceBundle.getBundle(ETIQUETAS).getString("Egoera"),
 		    "SaleObj"
 		};
 
 	public AdminErreklamazioakGUI() {
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("AdminErreklamazioakGUI.Title"));
+		this.setTitle(ResourceBundle.getBundle(ETIQUETAS).getString("AdminErreklamazioakGUI.Title"));
 		this.setSize(new Dimension(650, 350));
 		this.getContentPane().setLayout(null);
 		this.setLocationRelativeTo(null);
