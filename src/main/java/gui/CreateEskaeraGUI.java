@@ -23,6 +23,10 @@ public class CreateEskaeraGUI extends JFrame {
     private JButton btnCreate = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateEskaeraGUI.btnCreate"));
     private JLabel lblMsg = new JLabel("");
 
+
+
+	private String userEmail;
+
     public CreateEskaeraGUI(String userEmail) {
         this.userEmail = userEmail;
         this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateEskaeraGUI.Title"));
