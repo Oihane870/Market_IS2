@@ -1,7 +1,0 @@
-organization=oihane870
-projectKey=oihane870_marketis2
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.110499
-dashboardUrl=https://sonarcloud.io/dashboard?id=oihane870_marketis2
-ceTaskId=AaEmgE1qUmNMvf-vW69v
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AaEmgE1qUmNMvf-vW69v

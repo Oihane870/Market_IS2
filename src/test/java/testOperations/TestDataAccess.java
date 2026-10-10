@@ -1,5 +1,6 @@
 package testOperations;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -172,4 +173,76 @@ public class TestDataAccess {
 		
 
 		
+
+	public void createUser(String email, String name, float money) {
+		open();
+		db.getTransaction().begin();
+		Seller user = new Seller(email, name, null);
+		user.setMoney(money);
+		db.persist(user);
+		db.getTransaction().commit();
+		close();
+	}
+
+	public Integer addSaleToSeller(String email, String title, float price) {
+		open();
+		db.getTransaction().begin();
+		Seller seller = db.find(Seller.class, email);
+		Sale sale = seller.addSale(title, "desc " + title, 0, price, new Date(), null);
+		db.persist(sale);
+		db.merge(seller);
+		db.getTransaction().commit();
+		Integer saleNumber = sale.getSaleNumber();
+		close();
+		return saleNumber;
+	}
+
+	public void setSaleBuyer(Integer saleNumber, String buyerEmail) {
+		open();
+		db.getTransaction().begin();
+		Sale sale = db.find(Sale.class, saleNumber);
+		Seller buyer = db.find(Seller.class, buyerEmail);
+		sale.setBuyer(buyer);
+		db.merge(sale);
+		db.getTransaction().commit();
+		close();
+	}
+
+	public float getUserMoney(String email) {
+		open();
+		float money = db.find(Seller.class, email).getMoney();
+		close();
+		return money;
+	}
+
+	public String getSaleBuyer(Integer saleNumber) {
+		open();
+		Seller buyer = db.find(Sale.class, saleNumber).getBuyer();
+		close();
+		return buyer == null ? null : buyer.getEmail();
+	}
+
+	public boolean hasBidalketa(Integer saleNumber) {
+		open();
+		boolean has = db.find(Sale.class, saleNumber).getBidalketa() != null;
+		close();
+		return has;
+	}
+
+	public void removeUserWithSales(String email) {
+		open();
+		Seller user = db.find(Seller.class, email);
+		if (user != null) {
+			db.getTransaction().begin();
+			user.getBasket().clear();
+			user.getPurchasedSales().clear();
+			for (Sale s : new ArrayList<>(user.getSales())) {
+				user.removeSale(s);
+				db.remove(s);
+			}
+			db.remove(user);
+			db.getTransaction().commit();
+		}
+		close();
+	}
 }

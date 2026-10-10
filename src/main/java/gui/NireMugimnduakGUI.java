@@ -62,19 +62,7 @@ public class NireMugimnduakGUI extends JFrame {
 		
 		JButton btnErreklamatu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.Erreklamatu"));
 		btnErreklamatu.setBounds(new Rectangle(30, 260, 150, 30));
-		btnErreklamatu.addActionListener(e -> {
-			int row = tableProducts.getSelectedRow();
-			if (row != -1) {
-				String mota = (String) tableModelProducts.getValueAt(row, 0);
-				
-				if (mota.equals(ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.Compra"))) {
-					Sale sale = (Sale) tableModelProducts.getValueAt(row, 4); 
-					new ErreklamatuGUI(loggedUserEmail, sale).setVisible(true);
-				} else {
-					JOptionPane.showMessageDialog(null, "Bakarrik erosketak erreklamatu ditzakezu!");
-				}
-			}
-		});
+		btnErreklamatu.addActionListener(e -> erreklamatu(loggedUserEmail));
 		this.getContentPane().add(btnErreklamatu);
 
 		jButtonClose.setBounds(new Rectangle(190, 260, 130, 30));
@@ -87,51 +75,65 @@ public class NireMugimnduakGUI extends JFrame {
 
 		
 		btnJasota.setBounds(new Rectangle(330, 260, 270, 30));
-		btnJasota.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int row = tableProducts.getSelectedRow();
-				if (row == -1) {
-					JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorSelectPurchase"));
-					return;
-				}
-				
-				String mota = (String) tableModelProducts.getValueAt(row, 0);
-				if (!mota.equals(ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.Compra"))) {
-					JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorOnlyPurchases"));
-					return;
-				}
-
-				Sale selectedSale = (Sale) tableModelProducts.getValueAt(row, 4); 
-
-				if (selectedSale.getBidalketa() == null) {
-					JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorNoShipping"));
-					return;
-				}
-				
-				if (selectedSale.getBidalketa().getEgoera().equals("JASOTA")) {
-					JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorAlreadyReceived"));
-					return;
-				}
-
-				try {
-					BLFacade facade = MainGUI.getBusinessLogic();
-					boolean ok = facade.confirmArrival(selectedSale.getSaleNumber());
-					
-					if (ok) {
-						JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.SuccessDelivery"));
-						ErosketakKargatu(loggedUserEmail); 
-					} else {
-						JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorConfirm"));
-					}
-				} catch (Exception ex) {
-					ex.printStackTrace();
-				}
-			}
-		});
+		btnJasota.addActionListener(e -> jasotaBaieztatu(loggedUserEmail));
 		this.getContentPane().add(btnJasota);
 
 		
 		ErosketakKargatu(loggedUserEmail);
+	}
+
+	private void erreklamatu(String loggedUserEmail) {
+		int row = tableProducts.getSelectedRow();
+		if (row != -1) {
+			String mota = (String) tableModelProducts.getValueAt(row, 0);
+			
+			if (mota.equals(ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.Compra"))) {
+				Sale sale = (Sale) tableModelProducts.getValueAt(row, 4); 
+				new ErreklamatuGUI(loggedUserEmail, sale).setVisible(true);
+			} else {
+				JOptionPane.showMessageDialog(null, "Bakarrik erosketak erreklamatu ditzakezu!");
+			}
+		}
+	}
+
+	private void jasotaBaieztatu(String loggedUserEmail) {
+		int row = tableProducts.getSelectedRow();
+		if (row == -1) {
+			JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorSelectPurchase"));
+			return;
+		}
+		
+		String mota = (String) tableModelProducts.getValueAt(row, 0);
+		if (!mota.equals(ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.Compra"))) {
+			JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorOnlyPurchases"));
+			return;
+		}
+
+		Sale selectedSale = (Sale) tableModelProducts.getValueAt(row, 4); 
+
+		if (selectedSale.getBidalketa() == null) {
+			JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorNoShipping"));
+			return;
+		}
+		
+		if (selectedSale.getBidalketa().getEgoera().equals("JASOTA")) {
+			JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorAlreadyReceived"));
+			return;
+		}
+
+		try {
+			BLFacade facade = MainGUI.getBusinessLogic();
+			boolean ok = facade.confirmArrival(selectedSale.getSaleNumber());
+			
+			if (ok) {
+				JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.SuccessDelivery"));
+				ErosketakKargatu(loggedUserEmail); 
+			} else {
+				JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("Etiquetas").getString("NireErosketakGUI.ErrorConfirm"));
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 
 	private void ErosketakKargatu (String email) {
