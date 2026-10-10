@@ -1,7 +1,6 @@
 package gui;
 
 import javax.swing.*;
-
 import businesslogic.BLFacade;
 import java.awt.Dimension;
 import java.awt.Color;
