@@ -3,6 +3,7 @@ package domain;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Date;
 
 import javax.imageio.ImageIO;
@@ -32,7 +33,7 @@ public class Sale implements Serializable {
 	
 	// Mantenemos la carga EAGER para las denuncias
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
-	private ArrayList<Salaketa> salaketak = new ArrayList<>();
+	private List<Salaketa> salaketak = new ArrayList<>();
 	
 	@OneToOne(cascade=CascadeType.PERSIST)
     private Erreklamazioa erreklamazioa;
@@ -113,8 +114,8 @@ public class Sale implements Serializable {
 	    salaketak.add(new Salaketa(reason, userEmail));
 	}
 	
-	public ArrayList<Salaketa> getSalaketak() { return salaketak; }
-	public void setSalaketak(ArrayList<Salaketa> salaketak) { this.salaketak = salaketak; }
+	public List<Salaketa> getSalaketak() { return salaketak; }
+	public void setSalaketak(List<Salaketa> salaketak) { this.salaketak = salaketak; }
 	
 	public void removeSalaketa(Salaketa s) { salaketak.remove(s); }
 	

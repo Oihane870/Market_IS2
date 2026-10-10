@@ -4,11 +4,14 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import javax.imageio.ImageIO;
@@ -49,14 +52,13 @@ public class DataAccess {
         if (c.isDatabaseInitialized()) {
             String fileName=c.getDbFilename();
 
-            File fileToDelete= new File(fileName);
-            if(fileToDelete.delete()){
-                File fileToDeleteTemp= new File(fileName+"$");
-                fileToDeleteTemp.delete();
+            try {
+                Files.delete(Paths.get(fileName));
+                Files.deleteIfExists(Paths.get(fileName+"$"));
                 System.out.println("File deleted");
-             } else {
-                 System.out.println("Operation failed");
-                }
+            } catch (IOException e) {
+                System.out.println("Operation failed");
+            }
         }
         open();
         if (c.isDatabaseInitialized()) 
@@ -239,7 +241,6 @@ public class DataAccess {
             db.getTransaction().begin();
             Seller buyer = db.find(Seller.class, buyerEmail);
             Sale sale = db.find(Sale.class, saleNumber);
-            Seller seller = sale.getSeller();
             
             if (buyer == null || sale == null || sale.getBuyer() != null) {
                 db.getTransaction().rollback();
@@ -387,7 +388,7 @@ public class DataAccess {
                 return false;
             }
             
-            sale.getSalaketak().removeIf(s -> s.getId() == salaketa.getId());
+            sale.getSalaketak().removeIf(s -> Objects.equals(s.getId(), salaketa.getId()));
 
             Salaketa s = db.find(Salaketa.class, salaketa.getId());
             if (s != null) {
@@ -789,11 +790,7 @@ public class DataAccess {
             Mugimenduak mugimendu = new Mugimenduak("KOBRANTZA", new java.util.Date(), seller);
             mugimendu.setSale(sale);
             db.persist(mugimendu);
-            
 
-            db.merge(b);
-            db.merge(seller);
-            
             db.getTransaction().commit();
             return true;
         } catch (Exception e) {

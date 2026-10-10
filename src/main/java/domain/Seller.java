@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -101,9 +102,12 @@ public class Seller implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Seller other = (Seller) obj;
-		if (email != other.email)
-			return false;
-		return true;
+		return Objects.equals(email, other.email);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(email);
 	}
 
 	public List<Sale> getPurchasedSales() {

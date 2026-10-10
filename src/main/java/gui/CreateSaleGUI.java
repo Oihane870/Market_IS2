@@ -16,7 +16,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.awt.image.BufferedImage;
 import java.beans.PropertyChangeEvent;
@@ -291,8 +290,6 @@ public class CreateSaleGUI extends JFrame {
             fileInputStreamReader.read(bytes);
             encodedfile=new String(Base64.getEncoder().encode(bytes));
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
