@@ -45,8 +45,8 @@
 	</repositories>
 
 	<properties>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
 
 		<sonar.organization>oihane870</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
