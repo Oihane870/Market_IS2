@@ -18,8 +18,8 @@ public class AdminErreklamazioakGUI extends JFrame {
 	private DefaultTableModel tableModelProducts;
 	private JScrollPane scrollPanelProducts = new JScrollPane();
 	private static final String ETIQUETAS = "Etiquetas";
-	private JButton btnOnartu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AdminErreklamazioakGUI.Onartu"));
-	private JButton btnEzeztatu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AdminErreklamazioakGUI.Ezeztatu"));
+	private JButton btnOnartu = new JButton(ResourceBundle.getBundle(ETIQUETAS).getString("AdminErreklamazioakGUI.Onartu"));
+	private JButton btnEzeztatu = new JButton(ResourceBundle.getBundle(ETIQUETAS).getString("AdminErreklamazioakGUI.Ezeztatu"));
 
 	private String[] columnNamesProducts = new String[] {
 		    ResourceBundle.getBundle(ETIQUETAS).getString("NireErosketakGUI.ProduktuIzena"),

@@ -87,7 +87,7 @@ public interface BLFacade extends Serializable {
     @WebMethod public boolean removeFromBasket(String email, Integer saleNumber);
     @WebMethod public List<Sale> getBasket(String email);
     @WebMethod public boolean buyBasket(String email);
-    @WebMethod public boolean createEskaera(String buyerEmail, String title, String description);
+    @WebMethod public boolean createEskaera(String buyerEmail, String title);
     @WebMethod public List<Eskaera> getOpenEskaerak();
     @WebMethod public boolean addEskaintza(Integer eskaeraId, String sellerEmail, float price, String message);
     @WebMethod public boolean acceptEskaintza(Integer eskaeraId, Integer eskaintzaId);

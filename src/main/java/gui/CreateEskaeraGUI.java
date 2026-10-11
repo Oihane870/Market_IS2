@@ -24,10 +24,10 @@ public class CreateEskaeraGUI extends JFrame {
 
 
 
-	private String userEmail;
+	
 
-    public CreateEskaeraGUI(String userEmail) {
-        this.userEmail = userEmail;
+    public CreateEskaeraGUI() {
+        
         this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateEskaeraGUI.Title"));
         this.setSize(new Dimension(400, 350));
         this.getContentPane().setLayout(null);
@@ -66,7 +66,7 @@ public class CreateEskaeraGUI extends JFrame {
 
                 try {
                     BLFacade facade = MainGUI.getBusinessLogic();
-                    boolean ok = facade.createEskaera(userEmail, title, desc);
+                    boolean ok = facade.createEskaera( title, desc);
                     if (ok) {
                         lblMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateEskaeraGUI.Success"));
                         lblMsg.setForeground(Color.GREEN);

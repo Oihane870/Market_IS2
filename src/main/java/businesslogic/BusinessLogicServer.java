@@ -25,7 +25,7 @@ public class BusinessLogicServer extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 	JTextArea textArea;
-	BLFacade server;
+	private transient BLFacade server;
 	String service;
 
 	public static void main(String[] args) {
@@ -74,7 +74,11 @@ public class BusinessLogicServer extends JDialog {
 			buttonPane.add(createCancelButton());
 		}
 
+
 		ConfigXML c = ConfigXML.getInstance();
+
+		
+		
 
 		if (c.isBusinessLogicLocal()) {
 			textArea.append("\nERROR, the business logic is configured as local");
@@ -91,17 +95,24 @@ public class BusinessLogicServer extends JDialog {
 				System.out.println("Error in BusinessLogicServer: "+e.toString());
 				textArea.append("\nYou should have not launched DBManagerServer...\n");
 				textArea.append("\n\nOr maybe there is a BusinessLogicServer already launched...\n");
-				// No relances la excepción si quieres que continúe, o mantenla si es crítico
+				
 			}
 			
 			textArea.append("Running service at:\n\t" + service);
 			textArea.append("\n\n\nPress button to exit this server... ");
 		}
+
 	} 
 
-	private JButton createCancelButton() {  
-		JButton cancelButton = new JButton("Cancel"); 
-		cancelButton.setActionCommand("Cancel"); 
-		return cancelButton;  
+	
+
+
+
+
+	private JButton createCancelButton() {
+		JButton cancelButton = new JButton("Cancel");
+		cancelButton.setActionCommand("Cancel");
+		return cancelButton;
+
 	}
 }

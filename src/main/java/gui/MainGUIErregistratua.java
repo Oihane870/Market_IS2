@@ -145,7 +145,7 @@ public class MainGUIErregistratua extends JFrame {
         btnCreateEskaera = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.CreateEskaera"));
         btnCreateEskaera.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JFrame a = new CreateEskaeraGUI(sellerMail);
+                JFrame a = new CreateEskaeraGUI();
                 a.setVisible(true);
             }
         });

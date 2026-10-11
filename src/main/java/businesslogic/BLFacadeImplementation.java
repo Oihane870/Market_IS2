@@ -285,6 +285,12 @@ public class BLFacadeImplementation  implements BLFacade {
         dbManager.close();
         return ok;
     }
+
+	@Override
+	public boolean createEskaera(String buyerEmail, String title) {
+		// TODO Auto-generated method stub
+		return false;
+	}
     
 }
 
