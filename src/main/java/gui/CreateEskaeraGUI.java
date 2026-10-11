@@ -24,10 +24,10 @@ public class CreateEskaeraGUI extends JFrame {
 
 
 
-	private String userEmail;
+	
 
-    public CreateEskaeraGUI(String userEmail) {
-        this.userEmail = userEmail;
+    public CreateEskaeraGUI() {
+        
         this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateEskaeraGUI.Title"));
         this.setSize(new Dimension(400, 350));
         this.getContentPane().setLayout(null);
