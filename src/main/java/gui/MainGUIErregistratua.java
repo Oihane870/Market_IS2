@@ -50,9 +50,7 @@ public class MainGUIErregistratua extends JFrame {
     private JPanel panel;
     private final ButtonGroup buttonGroup = new ButtonGroup();
     
-    /**
-     * This is the default constructor
-     */
+    
     public MainGUIErregistratua( String mail) {
         super();
 
