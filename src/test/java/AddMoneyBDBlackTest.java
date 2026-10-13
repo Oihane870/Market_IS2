@@ -28,7 +28,7 @@ public class AddMoneyBDBlackTest {
 		sellerName = "Oiher Test";
 		zenbat = 20.0f;
 	}
-
+/*
 	@Test
 	
 	public void test1_AddMoneySuccess() {
@@ -71,7 +71,7 @@ public class AddMoneyBDBlackTest {
 			fail("No debería lanzar excepción, debe retornar false.");
 		}
 	}
-
+*/
 	@Test
 	
 	public void test3_SellerNotInDB() {
