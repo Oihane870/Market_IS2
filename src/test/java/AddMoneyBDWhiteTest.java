@@ -29,7 +29,7 @@ public class AddMoneyBDWhiteTest {
 		sellerName = "Oiher Test";
 	}
 
-	
+
 	@Test
 	public void testPath1_SellerNull() {
 		float zenbat = 20.0f;
@@ -90,7 +90,7 @@ public class AddMoneyBDWhiteTest {
 		}
 	}
 
-	
+
 	@Test
 	public void testPath3_SellerExists_ValidAmount_Success() {
 		float zenbat = 20.0f;
