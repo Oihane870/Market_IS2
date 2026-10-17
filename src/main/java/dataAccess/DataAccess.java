@@ -113,37 +113,63 @@ public class DataAccess {
         }
     }
     
-    public Sale createSale(SaleCreationData saleCreationData, String sellerEmail) throws FileNotUploadedException, MustBeLaterThanTodayException, SaleAlreadyExistException {
-        System.out.println(">> DataAccess: createProduct=> title= "+saleCreationData.title+" seller="+sellerEmail);
-        try {
-            if(saleCreationData.pubDate.before(UtilDate.trim(new Date()))) {
-                throw new MustBeLaterThanTodayException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.ErrorSaleMustBeLaterThanToday"));
-            }
-            if (saleCreationData.file==null)
-                throw new FileNotUploadedException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.ErrorFileNotUploadedException"));
+    public Sale createSale(SaleCreatingData saleCreatingData, String sellerEmail) throws FileNotUploadedException, MustBeLaterThanTodayException, SaleAlreadyExistException { 
 
-            db.getTransaction().begin();
-            
-            Seller seller = db.find(Seller.class, sellerEmail);
-            if (seller.doesSaleExist(saleCreationData.title)) {
-                db.getTransaction().commit();
-                throw new SaleAlreadyExistException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.SaleAlreadyExist"));
-            }
+    	System.out.println(">> DataAccess: createProduct=> title= "+saleCreatingData.title+" 	seller="+sellerEmail); 
 
-            Sale sale = seller.addSale(saleCreationData.title, saleCreationData.description, saleCreationData.status, saleCreationData.price, saleCreationData.pubDate, saleCreationData.file);
-            
-            db.persist(seller); 
-            db.getTransaction().commit();
-            System.out.println("sale stored "+sale+ " "+seller);
+    	try { 
 
-            System.out.println("hasta aqui");
-            return sale;
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-            db.getTransaction().commit();
-            return null;
-        }
-    }
+    		if(saleCreatingData.pubDate.before(UtilDate.trim(new Date()))) { 
+
+    			throw new 	MustBeLaterThanTodayException(ResourceBundle.getBundle("Etique	tas").getString("DataAccess.ErrorSaleMustBeLaterThanToday")); 
+
+    		} 
+
+    		if (saleCreatingData.file==null) 
+
+    		throw new 	FileNotUploadedException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.ErrorFileNotUploadedException")); 
+
+    	 
+
+    	db.getTransaction().begin(); 
+
+    	Seller seller = db.find(Seller.class, sellerEmail); 
+
+    	if (seller.doesSaleExist(saleCreatingData.title)) { 
+
+    	db.getTransaction().commit(); 
+
+    	throw new 	SaleAlreadyExistException(ResourceBundle.getBundle("Etiquetas"	).getString("DataAccess.SaleAlreadyExist")); 
+
+    	} 
+
+    	 
+
+    	Sale sale = seller.addSale(saleCreatingData.title, saleCreatingData.description, saleCreatingData.status, saleCreatingData.price, 	saleCreatingData.pubDate, saleCreatingData.file); 
+
+    	db.persist(seller);  
+
+    	db.getTransaction().commit(); 
+
+    	System.out.println("sale stored "+sale+ " "+seller); 
+
+    	 
+
+    	System.out.println("hasta aqui"); 
+
+    	return sale; 
+
+    	} catch (NullPointerException e) { 
+
+    	e.printStackTrace(); 
+
+    	db.getTransaction().commit(); 
+
+    	return null; 
+
+    	} 
+
+    	}
     
     public List<Sale> getSales(String desc) {
         TypedQuery<Sale> query = db.createQuery("SELECT s FROM Sale s WHERE s.title LIKE ?1 AND s.buyer IS NULL", Sale.class);
