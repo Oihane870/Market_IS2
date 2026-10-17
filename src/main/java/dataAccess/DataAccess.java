@@ -146,30 +146,20 @@ public class DataAccess {
     }
     
     public List<Sale> getSales(String desc) {
-        System.out.println(">> DataAccess: getProducts=> from= "+desc);
-        List<Sale> res = new ArrayList<Sale>(); 
         TypedQuery<Sale> query = db.createQuery("SELECT s FROM Sale s WHERE s.title LIKE ?1 AND s.buyer IS NULL", Sale.class);
-        query.setParameter(1, "%"+desc+"%");
-        
-        List<Sale> sales = query.getResultList();
-        for (Sale sale:sales){
-            res.add(sale);
-        }
-        return res;
+        return getSalesByDescription(query, desc);
     }
     
     public List<Sale> getPublishedSales(String desc, Date pubDate) {
-        System.out.println(">> DataAccess: getProducts=> from= "+desc);
-        List<Sale> res = new ArrayList<Sale>(); 
         TypedQuery<Sale> query = db.createQuery("SELECT s FROM Sale s WHERE s.title LIKE ?1 AND s.pubDate <=?2 AND s.buyer IS NULL",Sale.class);
-        query.setParameter(1, "%"+desc+"%");
         query.setParameter(2,pubDate);
-        
-        List<Sale> sales = query.getResultList();
-        for (Sale sale:sales){
-            res.add(sale);
-        }
-        return res;
+        return getSalesByDescription(query, desc);
+    }
+
+    private List<Sale> getSalesByDescription(TypedQuery<Sale> query, String desc) {
+        System.out.println(">> DataAccess: getProducts=> from= "+desc);
+        query.setParameter(1, "%"+desc+"%");
+        return new ArrayList<>(query.getResultList());
     }
 
     public void open(){
@@ -241,43 +231,37 @@ public class DataAccess {
             db.getTransaction().begin();
             Seller buyer = db.find(Seller.class, buyerEmail);
             Sale sale = db.find(Sale.class, saleNumber);
-            
-            if (buyer == null || sale == null || sale.getBuyer() != null) {
-                db.getTransaction().rollback();
-                return false; 
-            }
-            
-            float price = sale.getPrice();
-            if (buyer.getMoney() < price) {
-                db.getTransaction().rollback();
-                return false; 
-            }
-            
-            buyer.addMoney(-price);
-            sale.setBuyer(buyer); 
-            buyer.addPurchasedSale(sale); 
-            
-            Bidalketa bidalketa = new Bidalketa(sale);
-            sale.setBidalketa(bidalketa);
-            
-            db.persist(bidalketa);
-
-            // --- NUEVO BLOQUE MUGIMENDUAK ---
-            Mugimenduak mugimendu = new Mugimenduak("EROSKETA", new java.util.Date(), buyer);
-            mugimendu.setSale(sale);
-            db.persist(mugimendu);
-            // --------------------------------
-
-            db.merge(sale);
-            db.merge(buyer);
-            
+            if (!canBuy(buyer, sale)) { return cancelTransaction(); }
+            registerPurchase(buyer, sale);
             db.getTransaction().commit();
             return true;
         } catch (Exception e) {
             e.printStackTrace();
-            db.getTransaction().rollback();
-            return false;
+            return cancelTransaction();
         }
+    }
+
+    private boolean canBuy(Seller buyer, Sale sale) {
+        return buyer != null && sale != null && sale.getBuyer() == null && buyer.getMoney() >= sale.getPrice();
+    }
+
+    private void registerPurchase(Seller buyer, Sale sale) {
+        buyer.addMoney(-sale.getPrice());
+        sale.setBuyer(buyer);
+        buyer.addPurchasedSale(sale);
+        Bidalketa bidalketa = new Bidalketa(sale);
+        sale.setBidalketa(bidalketa);
+        db.persist(bidalketa);
+        Mugimenduak mugimendu = new Mugimenduak("EROSKETA", new java.util.Date(), buyer);
+        mugimendu.setSale(sale);
+        db.persist(mugimendu);
+        db.merge(sale);
+        db.merge(buyer);
+    }
+
+    private boolean cancelTransaction() {
+        db.getTransaction().rollback();
+        return false;
     }
     
     public List<Sale> getPurchasedItems(String email) {
@@ -384,37 +368,38 @@ public class DataAccess {
             Sale sale = db.find(Sale.class, saleNumber);
 
             if (sale == null || salaketa == null) {
-                db.getTransaction().rollback();
-                return false;
+                return cancelTransaction();
             }
-            
-            sale.getSalaketak().removeIf(s -> Objects.equals(s.getId(), salaketa.getId()));
-
-            Salaketa s = db.find(Salaketa.class, salaketa.getId());
-            if (s != null) {
-                s.setTratatuta(true);
-                db.merge(s);
-            }
-           
+            markReportAsSolved(sale, salaketa);
             if (aceptar) {
-                Seller owner = sale.getSeller();
-                if (owner != null) {
-                    owner.removeSale(sale);
-                    db.merge(owner);
-                }
-                db.remove(sale);
+                deleteReportedSale(sale);
             } else {
                 db.merge(sale);
             }
-
             db.getTransaction().commit();
             return true;
-
         } catch (Exception e) {
             e.printStackTrace();
-            db.getTransaction().rollback();
-            return false;
+            return cancelTransaction();
         }
+    }
+
+    private void markReportAsSolved(Sale sale, Salaketa salaketa) {
+        sale.getSalaketak().removeIf(s -> Objects.equals(s.getId(), salaketa.getId()));
+        Salaketa s = db.find(Salaketa.class, salaketa.getId());
+        if (s != null) {
+            s.setTratatuta(true);
+            db.merge(s);
+        }
+    }
+
+    private void deleteReportedSale(Sale sale) {
+        Seller owner = sale.getSeller();
+        if (owner != null) {
+            owner.removeSale(sale);
+            db.merge(owner);
+        }
+        db.remove(sale);
     }
 
     public boolean addErreklamazioa(Integer saleNumber, String reason, String buyerEmail) {

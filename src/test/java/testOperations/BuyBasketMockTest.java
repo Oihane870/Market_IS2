@@ -13,6 +13,7 @@ import org.mockito.Mockito;
 
 import businesslogic.BLFacade;
 import configuration.UtilDate;
+import domain.ProductInfo;
 import domain.Sale;
 import domain.Seller;
 import gui.MainGUI;
@@ -39,9 +40,9 @@ public class BuyBasketMockTest {
         Date today = UtilDate.trim(new Date());
 
         List<Sale> basket = new Vector<Sale>();
-        basket.add(new Sale("futbol baloia", "oso polita, gutxi erabilita", 2, 10,
+        basket.add(new Sale(new ProductInfo("futbol baloia", "oso polita, gutxi erabilita", 2, 10),
                 today, null, seller1));
-        basket.add(new Sale("salomon mendiko botak", "44 zenbakia, 3 ateraldi", 2, 20,
+        basket.add(new Sale(new ProductInfo("salomon mendiko botak", "44 zenbakia, 3 ateraldi", 2, 20),
                 today, null, seller1));
 
         // AJUSTAR: nombre real del método de BLFacade que devuelve la cesta
@@ -56,9 +57,9 @@ public class BuyBasketMockTest {
 	    Date today = UtilDate.trim(new Date());
 
 	    List<Sale> sales = new Vector<Sale>();
-	    sales.add(new Sale("futbol baloia", "oso polita, gutxi erabilita", 2, 10,
+	    sales.add(new Sale(new ProductInfo("futbol baloia", "oso polita, gutxi erabilita", 2, 10),
 	            today, null, seller1));
-	    sales.add(new Sale("salomon mendiko botak", "44 zenbakia, 3 ateraldi", 2, 20,
+	    sales.add(new Sale(new ProductInfo("salomon mendiko botak", "44 zenbakia, 3 ateraldi", 2, 20),
 	            today, null, seller1));
 
 	    Mockito.when(appFacadeMock.getPublishedSales(anyString(), any(Date.class)))

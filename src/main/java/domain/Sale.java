@@ -52,12 +52,12 @@ public class Sale implements Serializable {
 		super();
 	}
 		
-	public Sale(String title, String description, int status, float price, Date pubDate, File file, Seller seller) {
+	public Sale(ProductInfo info, Date pubDate, File file, Seller seller) {
 		super();
-		this.title = title;
-		this.description = description;
-		this.status = status;
-		this.price = price;
+		this.title = info.getTitle();
+		this.description = info.getDescription();
+		this.status = info.getStatus();
+		this.price = info.getPrice();
 		this.pubDate = pubDate;
 		
 		if (file != null) {
