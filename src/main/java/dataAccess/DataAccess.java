@@ -113,24 +113,24 @@ public class DataAccess {
         }
     }
     
-    public Sale createSale(String title, String description, int status, float price, Date pubDate, String sellerEmail, File file) throws FileNotUploadedException, MustBeLaterThanTodayException, SaleAlreadyExistException {
-        System.out.println(">> DataAccess: createProduct=> title= "+title+" seller="+sellerEmail);
+    public Sale createSale(SaleCreationData saleCreationData, String sellerEmail) throws FileNotUploadedException, MustBeLaterThanTodayException, SaleAlreadyExistException {
+        System.out.println(">> DataAccess: createProduct=> title= "+saleCreationData.title+" seller="+sellerEmail);
         try {
-            if(pubDate.before(UtilDate.trim(new Date()))) {
+            if(saleCreationData.pubDate.before(UtilDate.trim(new Date()))) {
                 throw new MustBeLaterThanTodayException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.ErrorSaleMustBeLaterThanToday"));
             }
-            if (file==null)
+            if (saleCreationData.file==null)
                 throw new FileNotUploadedException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.ErrorFileNotUploadedException"));
 
             db.getTransaction().begin();
             
             Seller seller = db.find(Seller.class, sellerEmail);
-            if (seller.doesSaleExist(title)) {
+            if (seller.doesSaleExist(saleCreationData.title)) {
                 db.getTransaction().commit();
                 throw new SaleAlreadyExistException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.SaleAlreadyExist"));
             }
 
-            Sale sale = seller.addSale(title, description, status, price, pubDate, file);
+            Sale sale = seller.addSale(saleCreationData.title, saleCreationData.description, saleCreationData.status, saleCreationData.price, saleCreationData.pubDate, saleCreationData.file);
             
             db.persist(seller); 
             db.getTransaction().commit();
@@ -198,14 +198,13 @@ public class DataAccess {
         return resizedImage;
     }
     
-    @WebMethod public Seller isLogged(String log, String pass) {
-         TypedQuery<Seller> query = db.createQuery("SELECT s FROM Seller s WHERE s.name=?1 AND s.pass=?2",Seller.class);   
-         query.setParameter(1, log);
-         query.setParameter(2, pass);
-         if(!query.getResultList().isEmpty()) //User Existitzen bada
-             return query.getResultList().get(0);
-         else return null;
-     }
+  @WebMethod 
+    public Seller isLogged(String log, String pass) {
+        TypedQuery<Seller> query = db.createQuery("SELECT s FROM Seller s WHERE s.name=?1 AND s.pass=?2", Seller.class);   
+        query.setParameter(1, log);
+        query.setParameter(2, pass);
+        return getSingleResultOrNull(query);
+    }
     
     @WebMethod public Seller isRegister(String erabiltzaile, String helbidea, String pass, String confirmPass) {
          if(!pass.equals(confirmPass)) {
@@ -491,57 +490,76 @@ public class DataAccess {
         );
         query.setParameter(1, log);
         query.setParameter(2, pass);
-
-        if (!query.getResultList().isEmpty())
-            return query.getResultList().get(0);
-        else
-            return null;
+        return getSingleResultOrNull(query);
+    }
+    private <T> T getSingleResultOrNull(TypedQuery<T> query) {
+        List<T> results = query.getResultList();
+        return results.isEmpty() ? null : results.get(0);
     }
     
-    public boolean addToBasket(String buyerEmail, Integer saleNumber) {
+     public boolean addToBasket(String buyerEmail, Integer saleNumber) {
         try {
             db.getTransaction().begin();
-            Seller buyer = db.find(Seller.class, buyerEmail);
-            Sale sale = db.find(Sale.class, saleNumber);
-
-            if (buyer == null || sale == null || sale.getBuyer() != null) {
+            boolean success = processAddToBasket(buyerEmail, saleNumber);
+            if (!success) {
                 db.getTransaction().rollback();
                 return false;
             }
-            
-            List<Sale> basket = buyer.getBasket();
-            
-            for (Sale s : basket) {
-                if (s.getSaleNumber().equals(saleNumber)) {
-                    db.getTransaction().rollback();
-                    return false; 
-                }
-            }
-            
-            if (basket.isEmpty()) {
-                basket.add(sale);
-                db.merge(buyer);
-                db.getTransaction().commit();
-                return true;
-            }
-            
-            Seller firstSeller = buyer.getBasket().get(0).getSeller();
-
-            if (!sale.getSeller().equals(firstSeller)) {
-                return false; 
-            } 
-
-            buyer.addToBasket(sale);
-            db.merge(buyer);
-
             db.getTransaction().commit();
             return true;
-
-        } catch (Exception e) {
+        } catch (Exception e) { // 1 punto de ramificación (catch)
             e.printStackTrace();
             db.getTransaction().rollback();
             return false;
         }
+    }
+
+    private boolean processAddToBasket(String buyerEmail, Integer saleNumber) {
+        Seller buyer = db.find(Seller.class, buyerEmail);
+        Sale sale = db.find(Sale.class, saleNumber);
+
+        if (!isValidSaleForBasket(buyer, sale)) return false; // 1 punto (if)
+        
+        List<Sale> basket = buyer.getBasket();
+        if (isSaleAlreadyInBasket(basket, saleNumber)) return false; // 1 punto (if)
+        
+        if (basket.isEmpty()) { // 1 punto (if)
+            return handleEmptyBasket(buyer, sale);
+        }
+        
+        return handleNonEmptyBasket(buyer, sale, basket);
+    }
+
+    private boolean isValidSaleForBasket(Seller buyer, Sale sale) {
+        if (buyer == null) return false;          // 1 punto (if)
+        if (sale == null) return false;           // 1 punto (if)
+        if (sale.getBuyer() != null) return false;  // 1 punto (if)
+        return true;
+    }
+
+    private boolean isSaleAlreadyInBasket(List<Sale> basket, Integer saleNumber) {
+        for (Sale s : basket) {                     // 1 punto (bucle for)
+            if (s.getSaleNumber().equals(saleNumber)) { // 1 punto (if)
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean handleEmptyBasket(Seller buyer, Sale sale) {
+        buyer.getBasket().add(sale);
+        db.merge(buyer);
+        return true; // 0 puntos de ramificación
+    }
+
+    private boolean handleNonEmptyBasket(Seller buyer, Sale sale, List<Sale> basket) {
+        Seller firstSeller = basket.get(0).getSeller();
+        if (!sale.getSeller().equals(firstSeller)) { // 1 punto (if)
+            return false;
+        } 
+        buyer.addToBasket(sale);
+        db.merge(buyer);
+        return true;
     }
     
     public boolean removeFromBasket(String email, Integer saleNumber) {
@@ -574,68 +592,15 @@ public class DataAccess {
     }
     
     
-    public boolean buyBasket(String buyerEmail) {
+     public boolean buyBasket(String buyerEmail) {
         try {
             db.getTransaction().begin();
-            Seller buyer = db.find(Seller.class, buyerEmail);
-            if (buyer == null) {
+            if (!processBasketPurchase(buyerEmail)) {
                 db.getTransaction().rollback();
                 return false;
             }
-
-            List<Sale> basket = buyer.getBasket();
-
-            if (basket == null || basket.isEmpty()) {
-                db.getTransaction().rollback();
-                return false;
-            }
-
-            Seller seller = basket.get(0).getSeller(); 
-
-            float total = 0;
-
-          
-            for (Sale s : basket) {
-                if (!s.getSeller().equals(seller)) {
-                    db.getTransaction().rollback();
-                    return false;
-                }
-                total += s.getPrice();
-            }
-
-           
-            if (buyer.getMoney() < total) {
-                db.getTransaction().rollback();
-                return false;
-            }
-
-          
-            buyer.addMoney(-total);
-       
-            for (Sale s : basket) {
-                s.setBuyer(buyer);
-                buyer.addPurchasedSale(s);
-                
-                Bidalketa bidalketa = new Bidalketa(s);
-                s.setBidalketa(bidalketa);
-                db.persist(bidalketa);
-
-               
-                Mugimenduak mugimendu = new Mugimenduak("EROSKETA", new java.util.Date(), buyer);
-                mugimendu.setSale(s);
-                db.persist(mugimendu);
-                
-                db.merge(s);
-            }
-
-            basket.clear();
-
-            db.merge(buyer);
-            db.merge(seller);
-
             db.getTransaction().commit();
             return true;
-
         } catch (Exception e) {
             e.printStackTrace();
             if (db.getTransaction().isActive()) {
@@ -643,6 +608,58 @@ public class DataAccess {
             }
             return false;
         }
+    }
+
+    private boolean processBasketPurchase(String buyerEmail) {
+        Seller buyer = db.find(Seller.class, buyerEmail);
+        List<Sale> basket = buyer != null ? buyer.getBasket() : null;
+        if (!isValidBasket(buyer, basket)) return false;
+        
+        float total = calculateBasketTotal(basket);
+        if (buyer.getMoney() < total) return false;
+
+        executeBasketCheckout(buyer, basket, total);
+        return true;
+    }
+
+    private boolean isValidBasket(Seller buyer, List<Sale> basket) {
+        if (buyer == null || basket == null || basket.isEmpty()) return false;
+        Seller firstSeller = basket.get(0).getSeller();
+        for (Sale s : basket) {
+            if (!s.getSeller().equals(firstSeller)) return false;
+        }
+        return true;
+    }
+
+    private float calculateBasketTotal(List<Sale> basket) {
+        float total = 0;
+        for (Sale s : basket) {
+            total += s.getPrice();
+        }
+        return total;
+    }
+
+    private void executeBasketCheckout(Seller buyer, List<Sale> basket, float total) {
+        buyer.addMoney(-total);
+        Seller seller = basket.get(0).getSeller();
+        for (Sale s : basket) {
+            processSingleSale(buyer, s);
+        }
+        basket.clear();
+        db.merge(buyer);
+        db.merge(seller);
+    }
+
+    private void processSingleSale(Seller buyer, Sale s) {
+        s.setBuyer(buyer);
+        buyer.addPurchasedSale(s);
+        Bidalketa bidalketa = new Bidalketa(s);
+        s.setBidalketa(bidalketa);
+        db.persist(bidalketa);
+        Mugimenduak mugimendu = new Mugimenduak("EROSKETA", new java.util.Date(), buyer);
+        mugimendu.setSale(s);
+        db.persist(mugimendu);
+        db.merge(s);
     }
 
     public boolean createEskaera(String buyerEmail, String title, String description) {
