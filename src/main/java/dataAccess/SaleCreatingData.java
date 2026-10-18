@@ -3,7 +3,7 @@ package dataAccess;
 import java.io.File;
 import java.util.Date;
 
-public class SaleCreationData {
+public class SaleCreatingData {
 	public String title;
 	public String description;
 	public int status;
@@ -11,7 +11,7 @@ public class SaleCreationData {
 	public Date pubDate;
 	public File file;
 
-	public SaleCreationData(String title, String description, int status, float price, Date pubDate, File file) {
+	public SaleCreatingData(String title, String description, int status, float price, Date pubDate, File file) {
 		this.title = title;
 		this.description = description;
 		this.status = status;
