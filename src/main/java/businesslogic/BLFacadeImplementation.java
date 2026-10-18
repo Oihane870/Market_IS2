@@ -7,6 +7,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 import dataAccess.DataAccess;
+import dataAccess.SaleCreatingData;
 import domain.Admin;
 import domain.Eskaera;
 import domain.Salaketa;
@@ -51,7 +52,7 @@ public class BLFacadeImplementation  implements BLFacade {
    @WebMethod
 	public Sale createSale(String title, String description,int status, float price, Date pubDate, String sellerEmail, File file) throws  FileNotUploadedException, MustBeLaterThanTodayException, SaleAlreadyExistException {
 		dbManager.open();
-		Sale product=dbManager.createSale(title, description, status, price, pubDate, sellerEmail, file);		
+		Sale product=dbManager.createSale(new SaleCreatingData(title, description, status, price, pubDate, file), sellerEmail);		
 		dbManager.close();
 		return product;
    }

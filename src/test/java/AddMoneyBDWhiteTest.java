@@ -29,7 +29,6 @@ public class AddMoneyBDWhiteTest {
 		sellerName = "Oiher Test";
 	}
 
-	
 
 	@Test
 	public void testPath1_SellerNull() {

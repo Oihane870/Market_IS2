@@ -78,9 +78,9 @@ public class Seller implements Serializable {
 	 * This method creates/adds a sale to a seller
 	 */
 	public Sale addSale(ProductInfo productInfo, Date pubDate, File file)  {
-		Sale sale=new Sale(productInfo, pubDate, file, this);
-        sales.add(sale);
-        return sale;
+	    Sale sale=new Sale(productInfo, pubDate, file, this);
+	    sales.add(sale);
+	    return sale;
 	}
 
 	
