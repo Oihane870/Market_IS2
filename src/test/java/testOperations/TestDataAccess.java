@@ -10,6 +10,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import configuration.ConfigXML;
+import domain.ProductInfo;
 import domain.Sale;
 import domain.Seller;
 
@@ -128,8 +129,9 @@ public class TestDataAccess {
 	    Seller seller1 = new Seller("seller1@gmail.com", "Antonio", null);
 	    Seller seller2 = new Seller("seller2@gmail.com", "Patricia", null);
 
-	    Sale sale1 = seller1.addSale("prod1", "desc1", 0, 20f, new Date(), null);
-	    Sale sale2 = seller2.addSale("prod2", "desc2", 0, 30f, new Date(), null);
+	    Sale sale1 = seller1.addSale(new ProductInfo("prod1", "desc1", 0, 20f), new Date(), null);
+	    Sale sale2 = seller2.addSale(new ProductInfo("prod2", "desc2", 0, 30f), new Date(), null);
+
 
 	    buyer.getBasket().add(sale1);
 	    buyer.getBasket().add(sale2);
@@ -158,7 +160,8 @@ public class TestDataAccess {
 
 	    Seller seller1 = new Seller("seller1@gmail.com", "Antonio", null);
 	    for (int i = 0; i < prices.length; i++) {
-	        Sale sale = seller1.addSale("prod" + i, "desc" + i, 0, prices[i], new Date(), null);
+	        Sale sale = seller1.addSale(new ProductInfo("prod" + i, "desc" + i, 0, prices[i]), new Date(), null);
+
 	        buyer.getBasket().add(sale);
 	    }
 
@@ -188,7 +191,7 @@ public class TestDataAccess {
 		open();
 		db.getTransaction().begin();
 		Seller seller = db.find(Seller.class, email);
-		Sale sale = seller.addSale(title, "desc " + title, 0, price, new Date(), null);
+		Sale sale = seller.addSale(new ProductInfo("producto1", "desc", 0, price), new Date(), null);
 		db.persist(sale);
 		db.merge(seller);
 		db.getTransaction().commit();

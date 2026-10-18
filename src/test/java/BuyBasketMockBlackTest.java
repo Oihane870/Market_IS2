@@ -21,6 +21,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import dataAccess.DataAccess;
+import domain.ProductInfo;
 import domain.Sale;
 import domain.Seller;
 
@@ -75,7 +76,7 @@ public class BuyBasketMockBlackTest {
 	public void test1() {
 			
 			Seller seller1 = new Seller("seller1@gmail.com", "Seller 1", null);
-			Sale sale1 = seller1.addSale("prod1", "desc1", 0, 20f, new Date(), null);
+			Sale sale1 = seller1.addSale(new ProductInfo("prod", "desc", 0, 20f), new Date(), null);
 			float moneyBefore = buyer1.getMoney();
 			buyer1.getBasket().add(sale1);
 
@@ -179,8 +180,8 @@ public class BuyBasketMockBlackTest {
 			
 			Seller seller1 = new Seller("seller1@gmail.com", "Seller 1", null);
 		    Seller seller2 = new Seller("seller2@gmail.com", "Seller 2", null);
-		    Sale sale1 = seller1.addSale("prod1", "desc1", 0, 20f, new Date(), null);
-		    Sale sale2 = seller2.addSale("prod2", "desc2", 0, 30f, new Date(), null);
+		    Sale sale1 = seller1.addSale(new ProductInfo("prod", "desc", 0, 20f), new Date(), null);
+		    Sale sale2 = seller2.addSale(new ProductInfo("prod", "desc", 0, 30f), new Date(), null);
 
 		    buyer2.getBasket().add(sale1);
 		    buyer2.getBasket().add(sale2);
@@ -201,7 +202,7 @@ public class BuyBasketMockBlackTest {
 		buyer2.setMoney(10f);
 	
 		Seller seller1 = new Seller("seller1@gmail.com", "Seller 1", null);
-		Sale sale1 = seller1.addSale("prod1", "desc1", 0, 20f, new Date(), null);
+		Sale sale1 = seller1.addSale(new ProductInfo("prod", "desc", 0, 20f), new Date(), null);
 		buyer2.getBasket().add(sale1);
 			
 		sut.open();

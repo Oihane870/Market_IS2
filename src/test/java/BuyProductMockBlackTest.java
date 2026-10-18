@@ -20,6 +20,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import dataAccess.DataAccess;
+import domain.ProductInfo;
 import domain.Sale;
 import domain.Seller;
 
@@ -79,7 +80,7 @@ public class BuyProductMockBlackTest {
 	}
 
 	private Sale newSale(Seller seller, int number, String title, float price) {
-		Sale s = seller.addSale(title, "desc " + title, 0, price, new Date(), null);
+		Sale s = seller.addSale(new ProductInfo("prod", "desc", 0, price), new Date(), null);
 		s.setSaleNumber(number);
 		return s;
 	}

@@ -20,6 +20,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import dataAccess.DataAccess;
+import domain.ProductInfo;
 import domain.Sale;
 import domain.Seller;
 import exceptions.MustBeLaterThanTodayException;
@@ -139,8 +140,9 @@ public class BuyBasketMockWhiteTest {
     public void test6() {
         Seller seller1 = new Seller("seller1@gmail.com", "Seller 1", null);
         Seller seller2 = new Seller("seller2@gmail.com", "Seller 2", null);
-        Sale sale1 = seller1.addSale("prod1", "desc1", 0, 20f, new Date(), null);
-        Sale sale2 = seller2.addSale("prod2", "desc2", 0, 30f, new Date(), null);
+        Sale sale1 = seller1.addSale(new ProductInfo("prod1", "desc1", 0, 20f), new Date(), null);
+        Sale sale2 = seller2.addSale(new ProductInfo("prod2", "desc2", 0, 30f), new Date(), null);
+
 
         buyer.getBasket().add(sale1);
         buyer.getBasket().add(sale2);
@@ -157,7 +159,7 @@ public class BuyBasketMockWhiteTest {
     public void test7() {
         buyer.setMoney(10f);
         Seller seller1 = new Seller("seller1@gmail.com", "Seller 1", null);
-        Sale sale1 = seller1.addSale("prod1", "desc1", 0, 75f, new Date(), null);
+        Sale sale1 = seller1.addSale(new ProductInfo("prod1", "desc", 0, 75f), new Date(), null);
         buyer.getBasket().add(sale1);
 
         sut.open();
@@ -171,8 +173,8 @@ public class BuyBasketMockWhiteTest {
     // Caso 8/10: 2 artículos, mismo seller, saldo suficiente
     public void test8() {
         Seller seller1 = new Seller("seller1@gmail.com", "Seller 1", null);
-        Sale sale1 = seller1.addSale("prod1", "desc1", 0, 75f, new Date(), null);
-        Sale sale2 = seller1.addSale("prod2", "desc2", 0, 15f, new Date(), null);
+        Sale sale1 = seller1.addSale(new ProductInfo("prod", "desc", 0, 75f), new Date(), null);
+        Sale sale2 = seller1.addSale(new ProductInfo("prod", "desc", 0, 15f), new Date(), null);
         buyer.getBasket().add(sale1);
         buyer.getBasket().add(sale2);
 
@@ -188,7 +190,7 @@ public class BuyBasketMockWhiteTest {
     // Caso 9: 1 artículo, mismo seller, saldo suficiente
     public void test9() {
         Seller seller1 = new Seller("seller1@gmail.com", "Seller 1", null);
-        Sale sale1 = seller1.addSale("prod1", "desc1", 0, 75f, new Date(), null);
+        Sale sale1 = seller1.addSale(new ProductInfo("prod", "desc", 0, 75f), new Date(), null);
         buyer.getBasket().add(sale1);
 
         sut.open();
