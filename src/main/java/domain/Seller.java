@@ -83,6 +83,7 @@ public class Seller implements Serializable {
         return sale;
 	}
 
+	
 	/**
 	 * This method checks if the ride already exists for that driver
 	 */

@@ -42,6 +42,7 @@ public class BuyBasketMockBlackTest {
 	private Seller buyer1;
 	private Seller buyer2;
 	
+	
 	@Before
 	public void init() {
 		MockitoAnnotations.openMocks(this);

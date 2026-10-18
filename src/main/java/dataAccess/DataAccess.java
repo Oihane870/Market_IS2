@@ -121,6 +121,7 @@ public class DataAccess {
 		db.persist(seller2);
 		db.persist(seller3);
 	}
+	
 
 	
     

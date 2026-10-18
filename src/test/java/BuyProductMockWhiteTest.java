@@ -44,6 +44,7 @@ public class BuyProductMockWhiteTest {
 	private Seller other;
 	private Sale saleA;    
 	private Sale saleCaro; 
+	
 
 	@Before
 	public void init() {
