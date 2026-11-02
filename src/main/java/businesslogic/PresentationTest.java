@@ -1,4 +1,4 @@
-packeage businesslogic
+package businesslogic;
 
 import static org.mockito.Mockito.*;
 
