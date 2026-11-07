@@ -7,6 +7,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 import dataAccess.DataAccess;
+import dataAccess.ExtendedIterator;
 import dataAccess.SaleCreatingData;
 import domain.Admin;
 import domain.Eskaera;
@@ -30,7 +31,7 @@ import java.util.logging.Logger;
 @WebService(endpointInterface = "businessLogic.BLFacade")
 public class BLFacadeImplementation  implements BLFacade {
 	private static final Logger LOGGER = Logger.getLogger(BLFacadeImplementation.class.getName());
-	 
+	
 
 		private static final String BASE_PATH="src/main/resources/images/";
 		protected transient DataAccess dbManager;
@@ -47,7 +48,7 @@ public class BLFacadeImplementation  implements BLFacade {
     
 
 	/**
-	 * {@inheritDoc}
+ 	 * {@inheritDoc}
 	 */
    @WebMethod
 	public Sale createSale(String title, String description,int status, float price, Date pubDate, String sellerEmail, File file) throws  FileNotUploadedException, MustBeLaterThanTodayException, SaleAlreadyExistException {
@@ -69,8 +70,8 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 	
 	/**
-	    * {@inheritDoc}
-	    */
+	 * {@inheritDoc}
+	 */
 		@WebMethod 
 		public List<Sale> getPublishedSales(String desc, Date pubDate) {
 			dbManager.open();
@@ -79,8 +80,8 @@ public class BLFacadeImplementation  implements BLFacade {
 			return rides;
 		}
 	/**
-	    * {@inheritDoc}
-	    */
+	 * {@inheritDoc}
+	 */
 	@WebMethod public BufferedImage getFile(String fileName) {
 		return dbManager.getFile(fileName);
 	}
@@ -93,7 +94,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 
 	/**
-	 * {@inheritDoc}
+ 	 * {@inheritDoc}
 	 */
     @WebMethod	
 	 public void initializeBD(){
@@ -102,7 +103,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 	}
     /**
-	 * {@inheritDoc}
+ 	 * {@inheritDoc}
 	 */
     @WebMethod public Image downloadImage(String imageName) {
         File image = new File(BASE_PATH+imageName);
@@ -159,12 +160,12 @@ public class BLFacadeImplementation  implements BLFacade {
     }
     
     @WebMethod 
-   	public List<Sale> getSoldItems(String email) {
-   		dbManager.open();
-   		List<Sale> items = dbManager.getSoldItems(email);
-   		dbManager.close();
-   		return items;
-   	}
+	public List<Sale> getSoldItems(String email) {
+		dbManager.open();
+		List<Sale> items = dbManager.getSoldItems(email);
+		dbManager.close();
+		return items;
+	}
     
     @WebMethod
     public boolean reportSale(String userEmail,Integer saleNumber, String reason) {
@@ -289,9 +290,17 @@ public class BLFacadeImplementation  implements BLFacade {
 
 	@Override
 	public boolean createEskaera(String buyerEmail, String title) {
-		// TODO Auto-generated method stub
 		return false;
 	}
-    
-}
 
+	@Override
+	@WebMethod
+	public ExtendedIterator getSalesIterator(String desc) {
+		dbManager.open();
+		// Obtenemos la lista de ventas y la envolvemos correctamente en el iterador
+		List<Sale> sales = dbManager.getSales(desc);
+		ExtendedIterator iterator = new dataAccess.ExtendedIteratorImplementation(sales);
+		dbManager.close();
+		return iterator;
+	}
+}

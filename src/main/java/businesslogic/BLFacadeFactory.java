@@ -1,4 +1,7 @@
-packeage businesslogic
+package businesslogic;
+
+import configuration.ConfigXML;
+
 public class BLFacadeFactory {
 
     public BLFacade createBLFacade() {

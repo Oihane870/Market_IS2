@@ -9,6 +9,7 @@ import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
+import dataAccess.ExtendedIterator;
 import domain.Admin;
 import domain.Eskaera;
 import domain.Salaketa;

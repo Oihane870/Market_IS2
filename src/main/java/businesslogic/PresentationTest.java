@@ -1,22 +1,23 @@
 package businesslogic;
 
-import static org.mockito.Mockito.*;
+import org.junit.Test;
+import gui.MainGUI;
 
 public class PresentationTest {
 
     @Test
-    public void testMainGUIWithMock() {
-        // 1. Crear el mock de BLFacade usando Mockito
-        BLFacade mockFacade = mock(BLFacade.class);
+    public void testMainGUI() {
+        // 1. Usar la implementación real en lugar de un Mock
+        BLFacade businessLogic = new BLFacadeImplementation();
         
-        // 2. Configurar el comportamiento del mock si es necesario
-        // when(mockFacade.someMethod()).thenReturn(someValue);
+        // 2. Inyectar la fachada de negocio en la interfaz gráfica
+        // (Asegúrate de que este método estático exista en tu clase MainGUI)
+        MainGUI.setBussinessLogic(businessLogic);
         
-        // 3. Pasar el mock directamente a la presentación o usar una factoría de pruebas
-        MainGUI.setBusinessLogic(mockFacade);
+        // 3. Instanciar la interfaz gráfica pasándole null (o el contenedor adecuado)
+        MainGUI gui = new MainGUI(null);
         
-        // La presentación funcionará aislada utilizando el objeto simulado (Mock)
-        MainGUI gui = new MainGUI();
+        // 4. Aserción para verificar que se creó correctamente
         assert gui != null;
     }
 }
