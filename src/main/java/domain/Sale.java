@@ -41,7 +41,7 @@ public class Sale implements Serializable {
 	@OneToOne(cascade=CascadeType.ALL)
     private Bidalketa bidalketa;
 	
-	// --- CAMBIO CLAVE: Eliminado @XmlIDREF y añadido EAGER ---
+	// --- CAMBIO CLAVE: Eliminado @XmlIDREF y aï¿½adido EAGER ---
 	@ManyToOne(fetch=FetchType.EAGER) 
 	private Seller seller;
 	
@@ -134,4 +134,9 @@ public class Sale implements Serializable {
     public int hashCode() {
         return saleNumber != null ? saleNumber.hashCode() : 0;
     }
+
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
