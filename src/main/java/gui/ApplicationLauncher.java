@@ -1,32 +1,30 @@
 package gui;
 
 import java.awt.Color;
-import java.net.URL;
 import java.util.Locale;
 
 import javax.swing.UIManager;
-import javax.xml.namespace.QName;
-import javax.xml.ws.Service;
 
 import configuration.ConfigXML;
-import dataAccess.DataAccess;
 import businesslogic.BLFacade;
-import businesslogic.BLFacadeImplementation;
+
 import businesslogic.BLFactory;
+
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-public class ApplicationLauncher { 
-	private static final Logger LOGGER = Logger.getLogger(ApplicationLauncher.class.getName());
-	
-	
-	public static void main(String[] args) {
 
-		ConfigXML c=ConfigXML.getInstance();		
-		Locale.setDefault(new Locale(c.getLocale()));
-		
-		MainGUI a=new MainGUI("seller3@gmail.com");
-		a.setVisible(true);
+public class ApplicationLauncher { 
+    private static final Logger LOGGER = Logger.getLogger(ApplicationLauncher.class.getName());
+    
+    public static void main(String[] args) {
+
+        ConfigXML c = ConfigXML.getInstance();      
+        Locale.setDefault(new Locale(c.getLocale()));
+        
+        MainGUI a = new MainGUI("seller3@gmail.com");
+        a.setVisible(true);
+
 
 
 		try {
@@ -50,3 +48,4 @@ public class ApplicationLauncher {
 	}
 
 }
+        

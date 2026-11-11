@@ -6,12 +6,13 @@ package gui;
 
 import javax.swing.*;
 
-// IMPORTANTE: Estos son los imports que Eclipse necesita ahora
 import businesslogic.BLFacade;
+import businesslogic.BLFactory;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.EventQueue;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Locale;
@@ -32,17 +33,12 @@ public class MainGUI extends JFrame {
 	
 	private JFrame nirePantaila;
 
-	// CAMBIO 1: La variable es del tipo de la interfaz (fíjate que está en azul)
 	private static BLFacade appFacadeInterface;
 	
-	
-
-	// CAMBIO 3: Devolvemos el tipo BLFacade
 	public static BLFacade getBusinessLogic(){
 		return appFacadeInterface;
 	}
 	
-	// CAMBIO 4: Recibimos el tipo BLFacade
 	public static void setBussinessLogic (BLFacade facade){
 		appFacadeInterface=facade;
 	}
@@ -137,7 +133,6 @@ public class MainGUI extends JFrame {
 		jContentPane.add(jButtonQueryQueries);
 		jContentPane.add(panel);
 		
-		
 		setContentPane(jContentPane);
 		setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.MainTitle") +": "+sellerMail);
 		
@@ -154,8 +149,29 @@ public class MainGUI extends JFrame {
 		jButtonLogin.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.Login"));
 		jButtonRegister.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.Register"));
 		jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.QuerySales"));
-		//jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.CreateSale"));
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.MainTitle")+ ": "+sellerMail);
 	}
-	
+
+	/**
+	 * Main method to launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					// 1. Inicializamos la lógica de negocio mediante la factoría
+					boolean isLocal = true;
+					BLFactory factory = new BLFactory();
+					BLFacade appFacade = factory.getBusinessLogicFactory(isLocal);
+					setBussinessLogic(appFacade);
+
+					// 2. Lanzamos la ventana principal de la GUI
+					MainGUI frame = new MainGUI("admin@gmail.com");
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 }
