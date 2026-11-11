@@ -1,4 +1,4 @@
-package domain; // O el paquete donde tengas tus clases
+package domain; 
 
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
