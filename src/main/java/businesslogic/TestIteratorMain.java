@@ -1,7 +1,7 @@
 package businesslogic;
 
-import businesslogic.BLFacade;
-import businesslogic.BLFacadeFactory;
+
+
 import dataAccess.ExtendedIterator;
 import domain.Sale;
 
@@ -10,8 +10,9 @@ public class TestIteratorMain {
     public static void main(String[] args) {
         try {
             // 1. Obtenemos la lógica de negocio mediante la factoría
-            BLFacadeFactory factory = new BLFacadeFactory();
-            BLFacade blFacade = factory.createBLFacade();
+        	boolean isLocal = true;
+            BLFactory factory = new BLFactory();
+            BLFacade blFacade = factory.getBusinessLogicFactory(isLocal);
 
             // (Omitimos initializeBD() para evitar duplicados en la base de datos)
 
