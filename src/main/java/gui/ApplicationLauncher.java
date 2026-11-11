@@ -12,6 +12,8 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import businesslogic.BLFacade;
 import businesslogic.BLFacadeImplementation;
+import businesslogic.BLFactory;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 public class ApplicationLauncher { 
@@ -29,29 +31,13 @@ public class ApplicationLauncher {
 
 		try {
 			
-			BLFacade appFacadeInterface;
+			
 			UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+			BLFactory factory = new BLFactory();
+			BLFacade blfacade = factory.getBusinessLogicFactory(c.isBusinessLogicLocal());
 			
-			if (c.isBusinessLogicLocal()) {
-				DataAccess da= new DataAccess();
-				appFacadeInterface=new BLFacadeImplementation(da);
-			}
-			else { //If remote
-				
-				 String serviceName= "http://"+c.getBusinessLogicNode() +":"+ c.getBusinessLogicPort()+"/ws/"+c.getBusinessLogicName()+"?wsdl";	 
-				 URL url = new URL(serviceName);
-
-		 
-		        //1st argument refers to wsdl document above
-				//2nd argument is service name, refer to wsdl document above
-		        QName qname = new QName("http://businessLogic/", "BLFacadeImplementationService");
-		 
-		        Service service = Service.create(url, qname);
-
-		        appFacadeInterface = service.getPort(BLFacade.class);
-			} 
 			
-			MainGUI.setBussinessLogic(appFacadeInterface);
+			MainGUI.setBussinessLogic(blfacade);
 			
 		}catch (Exception e) {
 			a.jLabelSelectOption.setText("Error: "+e.toString());
