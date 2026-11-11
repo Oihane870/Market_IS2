@@ -28,9 +28,11 @@ public class ExtendedIteratorImplementation implements ExtendedIterator {
 
     @Override
     public Object previous() {
-        if (!hasPrevious()) throw new NoSuchElementException();
-        currentIndex--;
-        return elements.get(currentIndex);
+    	if (hasPrevious()) {
+            currentIndex--;
+            return elements.get(currentIndex);
+        }
+        return null;
     }
 
     @Override
@@ -45,10 +47,6 @@ public class ExtendedIteratorImplementation implements ExtendedIterator {
 
     @Override
     public void goLast() {
-        if (!elements.isEmpty()) {
-            currentIndex = elements.size() - 1;
-        } else {
-            currentIndex = 0;
-        }
+    	this.currentIndex = elements.size();
     }
 }
